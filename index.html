@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Beyond Paradise Tourism — premium UAE holidays, tours, transfers, hotels and experiences.">
+<title>Beyond Paradise — UAE Travel, Beyond Ordinary</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+:root{
+  --bg:#070909;
+  --bg2:#0c0f0e;
+  --card:#101413;
+  --card2:#141918;
+  --text:#f3f0e9;
+  --muted:#929b96;
+  --soft:#c8ccc7;
+  --line:rgba(255,255,255,.10);
+  --line2:rgba(255,255,255,.06);
+  --gold:#d9b47a;
+  --gold2:#f0d4a4;
+  --green:#18372f;
+  --max:1180px;
+  --radius:24px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+
+[data-theme="light"]{
+  --bg:#f6f4ef;
+  --bg2:#eeece6;
+  --card:#fff;
+  --card2:#f3f1eb;
+  --text:#111715;
+  --muted:#66706b;
+  --soft:#4d5752;
+  --line:rgba(17,23,21,.11);
+  --line2:rgba(17,23,21,.06);
+  --gold:#9b6b32;
+  --gold2:#bd884b;
+  --green:#dfe7e2;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+  transition:background .35s,color .35s;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:999;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+img{width:100%;height:100%;object-fit:cover;display:block}
+.container{width:min(var(--max),calc(100% - 44px));margin:auto}
+.section{padding:125px 0}
+.eyebrow{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  margin-bottom:20px
+}
+.eyebrow:before{content:"";width:26px;height:1px;background:currentColor}
+h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
+.serif{font-family:"Playfair Display",serif;font-style:italic}
+
+/* NAV */
+.nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  height:78px;
+  display:flex;
+  align-items:center;
+  transition:.3s;
+}
+.nav.scrolled{
+  background:color-mix(in srgb,var(--bg) 82%,transparent);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line2);
+}
+.nav-inner{
+  width:min(var(--max),calc(100% - 44px));
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-symbol{
+  width:34px;height:34px;border:1px solid var(--gold);
+  border-radius:50%;display:grid;place-items:center;color:var(--gold);
+  font-size:13px;
+}
+.logo-text{line-height:1}
+.logo-text strong{display:block;font-family:Manrope;font-size:14px;letter-spacing:.12em}
+.logo-text small{display:block;margin-top:6px;font-size:7px;letter-spacing:.35em;color:var(--muted)}
+.nav-links{display:flex;gap:32px;align-items:center;margin-left:auto;margin-right:30px}
+.nav-links a{font-size:12px;color:var(--soft);transition:.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-actions{display:flex;gap:8px;align-items:center}
+.icon-btn{
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);
+  color:var(--text);display:grid;place-items:center;
+  cursor:pointer;transition:.25s;
+}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold);transform:rotate(10deg)}
+.nav-cta{
+  padding:11px 17px;border:1px solid var(--line);
+  border-radius:999px;font-size:11px;font-weight:700;
+  transition:.25s
+}
+.nav-cta:hover{background:var(--text);color:var(--bg)}
+.menu{display:none}
+
+/* HERO */
+.hero{
+  min-height:100svh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 73% 62%, rgba(214,160,83,.20) 0%, rgba(214,160,83,.07) 20%, transparent 43%),
+    radial-gradient(ellipse at 75% 72%, rgba(17,71,62,.34), transparent 42%),
+    linear-gradient(180deg,#030707 0%,#07100e 45%,#0a1714 100%);
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 72% 43%, rgba(217,180,122,.13), transparent 27%),
+    linear-gradient(180deg, rgba(0,0,0,.16), transparent 30%, rgba(0,0,0,.18));
+  pointer-events:none;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:-8%;
+  bottom:-30%;
+  width:70%;
+  height:70%;
+  background:radial-gradient(circle, rgba(217,180,122,.10), transparent 68%);
+  filter:blur(45px);
+  pointer-events:none;
+}
+.hero-grid{
+  width:min(var(--max),calc(100% - 44px));
+  margin:auto;
+  padding-top:90px;
+  display:grid;
+  grid-template-columns:46% 54%;
+  align-items:center;
+  min-height:100svh;
+}
+.hero-copy{position:relative;z-index:5;max-width:660px}
+.hero h1{
+  font-size:clamp(55px,7vw,92px);
+  line-height:.91;
+  letter-spacing:-.065em;
+  max-width:650px;
+}
+.hero h1 .muted-line{color:var(--muted)}
+.hero h1 .gold-line{color:var(--gold);font-family:"Playfair Display";font-style:italic}
+.hero-desc{
+  color:rgba(243,240,233,.72);
+  max-width:480px;
+  font-size:14px;
+  line-height:1.8;
+  margin:29px 0;
+}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  border-radius:999px;padding:14px 19px;font-size:11px;font-weight:700;
+  display:inline-flex;align-items:center;gap:10px;transition:.25s
+}
+.btn-primary{background:var(--text);color:var(--bg)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(0,0,0,.25)}
+.btn-outline{border:1px solid var(--line);color:var(--text)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-note{
+  margin-top:50px;display:flex;align-items:center;gap:13px;color:var(--muted);font-size:10px
+}
+.hero-note i{color:var(--gold)}
+.hero-note strong{color:var(--text);font-weight:500}
+
+/* 3D HERO */
+.hero-visual{
+  height:700px;
+  position:relative;
+  display:grid;
+  place-items:center;
+}
+#uae3d{
+  width:100%;
+  height:100%;
+  display:block;
+  cursor:grab;
+  touch-action:none;
+}
+#uae3d:active{cursor:grabbing}
+.hero-3d-label{
+  position:absolute;
+  right:15px;
+  top:23%;
+  color:var(--gold2);
+  font-size:9px;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  writing-mode:vertical-rl;
+  pointer-events:none;
+}
+.hero-3d-caption{
+  position:absolute;
+  left:8%;
+  bottom:11%;
+  padding:12px 15px;
+  border:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg) 70%,transparent);
+  backdrop-filter:blur(12px);
+  border-radius:13px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:.08em;
+  pointer-events:none;
+}
+.hero-3d-caption strong{color:var(--text);font-weight:600}
+.scroll{
+  position:absolute;right:0;bottom:35px;
+  font-size:9px;letter-spacing:.2em;color:var(--muted);writing-mode:vertical-rl;
+  display:flex;gap:10px;align-items:center
+}
+.scroll:after{content:"";height:42px;width:1px;background:var(--line)}
+
+/* PURE HTML/CSS HERO VISUAL */
+.hero-visual{
+  height:700px;
+  position:relative;
+  display:block;
+  pointer-events:none;
+}
+.sun-glow{
+  position:absolute;
+  width:280px;height:280px;
+  border-radius:50%;
+  left:57%;top:28%;
+  background:radial-gradient(circle,rgba(240,190,108,.25),rgba(240,190,108,.06) 34%,transparent 70%);
+  filter:blur(5px);
+}
+.horizon-glow{
+  position:absolute;
+  left:0;right:0;bottom:27%;
+  height:100px;
+  background:linear-gradient(90deg,transparent,rgba(220,172,99,.13),transparent);
+  filter:blur(22px);
+}
+.skyline{
+  position:absolute;
+  left:0;right:-3%;
+  bottom:26%;
+  height:250px;
+}
+.skyline i{
+  position:absolute;
+  left:var(--x);
+  bottom:0;
+  width:var(--w);
+  height:var(--h);
+  background:linear-gradient(90deg,#07100e,#14231f 45%,#08110f);
+  border:1px solid rgba(217,180,122,.08);
+  border-bottom:0;
+  border-radius:2px 2px 0 0;
+  box-shadow:inset 5px 0 10px rgba(255,255,255,.025);
+}
+.skyline i:before{
+  content:"";
+  position:absolute;
+  left:18%;right:18%;top:9%;
+  height:82%;
+  opacity:.35;
+  background:repeating-linear-gradient(
+    to bottom,
+    rgba(226,190,125,.75) 0 2px,
+    transparent 2px 13px
+  );
+}
+.skyline-back{opacity:.58;transform:scale(.9);transform-origin:bottom}
+.skyline-front{height:285px;filter:drop-shadow(0 -10px 28px rgba(0,0,0,.22))}
+
+.water{
+  position:absolute;
+  left:0;right:0;
+  bottom:0;
+  height:28%;
+  background:
+    linear-gradient(180deg,rgba(7,20,17,.2),rgba(3,9,8,.88)),
+    repeating-linear-gradient(90deg,transparent 0 45px,rgba(217,180,122,.025) 46px 47px);
+}
+.water:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,180,122,.28),transparent);
+}
+
+.burj{
+  position:absolute;
+  z-index:5;
+  left:62%;
+  bottom:26%;
+  width:92px;
+  height:560px;
+  transform:translateX(-50%);
+  filter:drop-shadow(0 0 22px rgba(217,180,122,.10));
+}
+.burj-tier{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:0;
+  background:linear-gradient(90deg,#091411,#315449 45%,#0b1613);
+  clip-path:polygon(50% 0,72% 9%,84% 100%,16% 100%,28% 9%);
+  border-left:1px solid rgba(217,180,122,.20);
+  border-right:1px solid rgba(217,180,122,.10);
+}
+.burj-tier:after{
+  content:"";
+  position:absolute;left:49%;top:8%;bottom:2%;
+  width:1px;background:rgba(235,204,151,.48);
+  box-shadow:0 0 10px rgba(235,204,151,.22);
+}
+.burj .t1{width:92px;height:255px}
+.burj .t2{width:67px;height:335px}
+.burj .t3{width:46px;height:410px}
+.burj .t4{width:27px;height:485px}
+.burj .t5{width:12px;height:535px}
+.burj-spire{
+  position:absolute;left:50%;bottom:505px;
+  width:2px;height:62px;transform:translateX(-50%);
+  background:linear-gradient(transparent,var(--gold));
+  box-shadow:0 0 10px rgba(217,180,122,.45)
+}
+
+.reflection{
+  position:absolute;
+  z-index:4;
+  bottom:2%;
+  left:62%;
+  transform:translateX(-50%);
+  height:155px;
+  background:linear-gradient(180deg,rgba(217,180,122,.14),transparent);
+  filter:blur(5px);
+}
+.reflection.r1{width:48px}
+.reflection.r2{width:92px;opacity:.5}
+.reflection.r3{width:150px;opacity:.25}
+
+.hero-location-card{
+  position:absolute;
+  right:3%;
+  bottom:10%;
+  min-width:235px;
+  padding:16px 17px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:16px;
+  background:rgba(7,9,9,.42);
+  backdrop-filter:blur(15px);
+  color:white;
+  box-shadow:0 18px 50px rgba(0,0,0,.25);
+}
+.hero-location-card .location-line{width:25px;height:1px;background:var(--gold);flex:none}
+.hero-location-card small{display:block;font-size:7px;letter-spacing:.2em;color:rgba(255,255,255,.48)}
+.hero-location-card strong{display:block;font-family:Manrope;font-size:13px;margin-top:5px;font-weight:600}
+.hero-location-card i{margin-left:auto;color:var(--gold);font-size:10px}
+.hero-image-credit{
+  position:absolute;right:3%;top:29%;writing-mode:vertical-rl;
+  font-size:8px;letter-spacing:.24em;color:rgba(255,255,255,.42)
+}
+@media(max-width:1000px){
+  .hero-visual{height:500px}
+  .burj{left:65%;transform:translateX(-50%) scale(.82);transform-origin:bottom}
+  .hero-location-card{right:2%;bottom:8%}
+}
+@media(max-width:640px){
+  .hero-visual{height:300px}
+  .burj{left:66%;transform:translateX(-50%) scale(.55);transform-origin:bottom}
+  .skyline{bottom:22%}
+  .water{height:24%}
+  .hero-location-card{left:0;right:auto;bottom:3%;min-width:210px}
+  .hero-image-credit{display:none}
+}
+
+/* INTRO */
+.intro{
+  border-top:1px solid var(--line2);
+  border-bottom:1px solid var(--line2);
+  background:var(--bg2)
+}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.intro-visual{
+  height:560px;border-radius:var(--radius);overflow:hidden;position:relative;
+  background:#162c26
+}
+.intro-visual img{opacity:.86;transition:transform 1s var(--ease)}
+.intro-visual:hover img{transform:scale(1.04)}
+.image-caption{
+  position:absolute;left:20px;bottom:20px;padding:13px 16px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(5,10,9,.55);
+  backdrop-filter:blur(12px);border-radius:13px;font-size:10px;color:white
+}
+.intro h2{font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.055em}
+.intro h2 em{color:var(--gold);font-family:"Playfair Display";font-style:italic}
+.intro-copy{color:var(--muted);font-size:14px;line-height:1.85;margin:25px 0 32px;max-width:510px}
+.points{border-top:1px solid var(--line)}
+.point{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line);align-items:center}
+.point b{font-size:10px;color:var(--gold);font-weight:500}
+.point strong{font-size:13px;font-weight:600}.point span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+
+/* DESTINATIONS */
+.dest-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:42px}
+.dest-head h2{font-size:clamp(42px,5vw,66px);line-height:.98;letter-spacing:-.055em}
+.dest-head h2 em{color:var(--gold);font-family:"Playfair Display"}
+.dest-copy{max-width:380px;color:var(--muted);font-size:13px;line-height:1.8}
+.destinations-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;height:560px}
+.destination{position:relative;overflow:hidden;border-radius:20px;background:var(--card)}
+.destination img{transition:transform .8s var(--ease);filter:saturate(.85)}
+.destination:hover img{transform:scale(1.055);filter:saturate(1)}
+.destination:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,8,7,.85),transparent 55%)}
+.destination-content{position:absolute;z-index:2;left:22px;right:22px;bottom:20px}
+.destination-content small{font-size:9px;letter-spacing:.19em;color:var(--gold2);text-transform:uppercase}
+.destination-content h3{font-size:25px;letter-spacing:-.035em;margin:6px 0}
+.destination-content p{font-size:11px;color:rgba(255,255,255,.65);line-height:1.55}
+.destination-arrow{position:absolute;right:20px;bottom:20px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;z-index:3;transition:.25s}
+.destination:hover .destination-arrow{background:white;color:#111}
+
+/* SERVICES */
+.services{background:var(--bg2)}
+.service-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:50px}
+.service-head h2{font-size:clamp(42px,5vw,66px);line-height:.97;letter-spacing:-.055em}
+.service-head h2 em{font-family:"Playfair Display";color:var(--gold)}
+.service-head p{color:var(--muted);font-size:13px;line-height:1.8;max-width:450px;align-self:end}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.service{
+  min-height:255px;padding:25px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  position:relative;transition:.3s;overflow:hidden
+}
+.service:hover{background:var(--card)}
+.service-num{font-size:9px;color:var(--gold);letter-spacing:.12em}
+.service-icon{font-size:22px;color:var(--gold);margin:45px 0 22px}
+.service h3{font-size:17px;letter-spacing:-.025em}
+.service p{font-size:11px;color:var(--muted);line-height:1.7;margin-top:8px}
+.service .arrow{position:absolute;right:20px;top:20px;color:var(--muted);font-size:11px}
+
+/* EXPERIENCE */
+.experience{
+  min-height:720px;display:flex;align-items:end;
+  background:
+    linear-gradient(0deg,rgba(4,8,7,.9),rgba(4,8,7,.05) 75%),
+    url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=2200&q=90") center/cover;
+  position:relative
+}
+.experience-content{padding:80px 0;width:min(var(--max),calc(100% - 44px));margin:auto}
+.experience h2{font-size:clamp(50px,7vw,92px);line-height:.9;letter-spacing:-.065em;max-width:760px}
+.experience h2 em{font-family:"Playfair Display";color:var(--gold)}
+.experience-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:40px;gap:40px}
+.experience-bottom p{max-width:500px;color:rgba(255,255,255,.65);font-size:13px;line-height:1.8}
+.experience-tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.tag{border:1px solid rgba(255,255,255,.2);padding:9px 12px;border-radius:999px;font-size:9px;color:rgba(255,255,255,.75)}
+
+/* PACKAGES */
+.package-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}
+.package-head h2{font-size:clamp(42px,5vw,65px);letter-spacing:-.055em;line-height:.95}
+.package-head h2 em{color:var(--gold);font-family:"Playfair Display"}
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.package{border:1px solid var(--line);background:var(--card);border-radius:20px;overflow:hidden;transition:.3s}
+.package:hover{transform:translateY(-5px);border-color:rgba(217,180,122,.35)}
+.package-img{height:270px;position:relative}
+.package-img img{filter:saturate(.8)}
+.package-label{position:absolute;top:15px;left:15px;padding:7px 10px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border-radius:999px;color:white;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
+.package-body{padding:22px}
+.package-meta{display:flex;justify-content:space-between;color:var(--gold);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.package h3{font-size:21px;margin:12px 0 8px;letter-spacing:-.03em}
+.package p{font-size:11px;color:var(--muted);line-height:1.7}
+.package-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:20px;padding-top:17px}
+.package-foot span{font-size:10px;color:var(--muted)}
+.circle-link{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:10px;transition:.2s}
+.package:hover .circle-link{background:var(--text);color:var(--bg)}
+
+/* CTA */
+.cta{
+  margin:0 auto 35px;width:min(var(--max),calc(100% - 44px));min-height:480px;border-radius:28px;
+  overflow:hidden;position:relative;display:flex;align-items:center;
+  background:
+    linear-gradient(90deg,rgba(4,13,11,.9),rgba(4,13,11,.35)),
+    url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=2200&q=90") center/cover;
+}
+.cta-content{padding:65px;max-width:680px}
+.cta h2{font-size:clamp(48px,6vw,78px);line-height:.91;letter-spacing:-.06em}
+.cta h2 em{font-family:"Playfair Display";color:var(--gold)}
+.cta p{font-size:13px;line-height:1.8;color:rgba(255,255,255,.65);margin:22px 0 28px;max-width:500px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line2);padding:70px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.5fr .7fr .7fr 1fr;gap:50px;padding-bottom:55px}
+.footer-brand h3{font-size:24px;letter-spacing:.08em}
+.footer-brand p{max-width:330px;color:var(--muted);font-size:11px;line-height:1.8;margin-top:15px}
+.footer-col h4{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.footer-col a,.footer-col p{display:block;font-size:11px;color:var(--muted);margin:10px 0;line-height:1.5}
+.footer-col a:hover{color:var(--text)}
+.socials{display:flex;gap:7px;margin-top:18px}
+.socials a{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--soft)}
+.footer-bottom{border-top:1px solid var(--line2);padding-top:22px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;right:20px;bottom:20px;width:51px;height:51px;border-radius:50%;
+  display:grid;place-items:center;background:#f5f1e8;color:#102a25;z-index:80;
+  box-shadow:0 15px 40px rgba(0,0,0,.28);font-size:20px;transition:.25s
+}
+.whatsapp:hover{transform:translateY(-4px)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+
+/* LIGHT THEME image overlays */
+[data-theme="light"] .experience,
+[data-theme="light"] .cta{background-blend-mode:multiply}
+[data-theme="light"] .destination:after{background:linear-gradient(0deg,rgba(4,8,7,.72),transparent 58%)}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .nav-links{display:none}
+  .menu{display:grid}
+  .hero-grid{grid-template-columns:1fr;padding-top:110px}
+  .hero-copy{padding-top:50px}
+  .hero-visual{height:560px}
+  .scene{transform:scale(.82)}
+  .intro-grid{grid-template-columns:1fr;gap:50px}
+  .intro-visual{height:500px}
+  .destinations-grid{grid-template-columns:1fr 1fr;height:auto}
+  .destination:first-child{grid-column:1/-1;height:470px}
+  .destination:not(:first-child){height:390px}
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+  .service-head{grid-template-columns:1fr}
+  .service-head p{align-self:auto}
+  .package-grid{grid-template-columns:1fr 1fr}
+  .package:last-child{grid-column:1/-1}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .container,.hero-grid,.nav-inner{width:calc(100% - 28px)}
+  .section{padding:82px 0}
+  .nav{height:68px}
+  .nav-cta{display:none}
+  .hero-grid{padding-top:65px}
+  .hero h1{font-size:55px}
+  .hero-desc{font-size:13px}
+  .hero-note{margin-top:30px}
+  .hero-visual{height:430px;margin-top:-10px}
+  .hero-3d-label{right:2px}
+  .hero-3d-caption{left:3%;bottom:7%}
+  .scroll{display:none}
+  .dest-head,.package-head{display:block}
+  .dest-copy{margin-top:18px}
+  .destinations-grid{grid-template-columns:1fr}
+  .destination:first-child{grid-column:auto;height:420px}
+  .destination:not(:first-child){height:350px}
+  .service-grid{grid-template-columns:1fr}
+  .service{min-height:210px}
+  .experience{min-height:620px}
+  .experience-content{width:calc(100% - 28px);padding:55px 0}
+  .experience-bottom{display:block}
+  .experience-tags{justify-content:flex-start;margin-top:22px}
+  .package-grid{grid-template-columns:1fr}
+  .package:last-child{grid-column:auto}
+  .cta{width:calc(100% - 28px);min-height:530px}
+  .cta-content{padding:32px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:35px 20px}
+  .footer-brand{grid-column:1/-1}
+  .footer-bottom{flex-direction:column;gap:8px}
+}
+
+/* Mobile dropdown */
+.mobile-menu{
+  position:fixed;z-index:99;top:68px;left:14px;right:14px;
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:12px;display:none;box-shadow:0 20px 50px rgba(0,0,0,.3)
+}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:14px;border-bottom:1px solid var(--line2);font-size:13px}
+.mobile-menu a:last-child{border:0}
+@keyframes float{0%,100%{transform:translateY(0) rotateY(-6deg)}50%{transform:translateY(-15px) rotateY(8deg)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,180,122,.0)}50%{box-shadow:0 0 0 15px rgba(217,180,122,.03)}}
+@keyframes spin{to{transform:rotate(343deg) rotateX(62deg)}}
+@keyframes spin2{to{transform:rotate(415deg) rotateX(68deg)}}
+@keyframes spin3{to{transform:rotateY(427deg) rotateX(9deg)}}
+</style>
+</head>
+
+<body data-theme="dark">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-symbol"><i class="fa-solid fa-compass"></i></span>
+      <span class="logo-text"><strong>BEYOND PARADISE</strong><small>TOURISM · UAE</small></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Change theme" title="Change theme">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+      <a class="nav-cta" href="#contact">Plan a UAE trip <i class="fa-solid fa-arrow-right"></i></a>
+      <button class="icon-btn menu" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#destinations">Destinations</a>
+  <a href="#services">Services</a>
+  <a href="#packages">Packages</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">United Arab Emirates</div>
+      <h1>More than<br><span class="muted-line">a destination.</span><br><span class="gold-line">A feeling.</span></h1>
+      <p class="hero-desc">
+        Discover the UAE through beautifully planned holidays, private tours, luxury stays and experiences designed around you.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#destinations">Explore the UAE <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="btn btn-outline" href="#contact">Create my trip</a>
+      </div>
+      <div class="hero-note">
+        <i class="fa-solid fa-circle-check"></i>
+        <span><strong>UAE specialists</strong> · Dubai · Abu Dhabi · Sharjah · Ras Al Khaimah · Fujairah · Ajman · Umm Al Quwain</span>
+      </div>
+    </div>
+
+    <!-- Pure HTML/CSS cinematic Dubai skyline -->
+    <div class="hero-visual reveal" aria-label="Stylized Dubai skyline">
+      <div class="sun-glow"></div>
+      <div class="horizon-glow"></div>
+
+      <div class="skyline skyline-back">
+        <i style="--x:3%;--w:30px;--h:110px"></i>
+        <i style="--x:9%;--w:45px;--h:160px"></i>
+        <i style="--x:16%;--w:34px;--h:135px"></i>
+        <i style="--x:23%;--w:55px;--h:190px"></i>
+        <i style="--x:31%;--w:38px;--h:150px"></i>
+        <i style="--x:39%;--w:60px;--h:220px"></i>
+        <i style="--x:48%;--w:42px;--h:175px"></i>
+        <i style="--x:56%;--w:48px;--h:205px"></i>
+        <i style="--x:65%;--w:35px;--h:150px"></i>
+        <i style="--x:72%;--w:58px;--h:195px"></i>
+        <i style="--x:82%;--w:40px;--h:160px"></i>
+        <i style="--x:90%;--w:62px;--h:205px"></i>
+      </div>
+
+      <div class="water"></div>
+
+      <div class="skyline skyline-front">
+        <i style="--x:0%;--w:42px;--h:170px"></i>
+        <i style="--x:7%;--w:68px;--h:220px"></i>
+        <i style="--x:17%;--w:48px;--h:280px"></i>
+        <i style="--x:26%;--w:72px;--h:205px"></i>
+        <i style="--x:36%;--w:55px;--h:315px"></i>
+        <i style="--x:46%;--w:50px;--h:250px"></i>
+        <i style="--x:55%;--w:78px;--h:185px"></i>
+        <i style="--x:66%;--w:58px;--h:300px"></i>
+        <i style="--x:76%;--w:72px;--h:220px"></i>
+        <i style="--x:87%;--w:50px;--h:275px"></i>
+        <i style="--x:96%;--w:65px;--h:195px"></i>
+      </div>
+
+      <div class="burj">
+        <span class="burj-tier t1"></span>
+        <span class="burj-tier t2"></span>
+        <span class="burj-tier t3"></span>
+        <span class="burj-tier t4"></span>
+        <span class="burj-tier t5"></span>
+        <span class="burj-spire"></span>
+      </div>
+
+      <div class="reflection r1"></div>
+      <div class="reflection r2"></div>
+      <div class="reflection r3"></div>
+
+      <div class="hero-location-card">
+        <span class="location-line"></span>
+        <div>
+          <small>YOUR NEXT ESCAPE</small>
+          <strong>Dubai · UAE</strong>
+        </div>
+        <i class="fa-solid fa-arrow-up-right"></i>
+      </div>
+      <div class="hero-image-credit">DUBAI · UNITED ARAB EMIRATES</div>
+      <div class="scroll">SCROLL TO DISCOVER</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section intro" id="about">
+  <div class="container intro-grid">
+    <div class="intro-visual reveal">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=90" alt="Dubai skyline at night">
+      <div class="image-caption"><i class="fa-solid fa-location-dot"></i> Dubai · UAE</div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">The Beyond Paradise way</div>
+      <h2>Leave the planning to <em>us.</em></h2>
+      <p class="intro-copy">
+        We make exploring the UAE feel simple. From the first idea to your airport transfer home, one team brings together hotels, experiences, transportation and local support.
+      </p>
+      <div class="points">
+        <div class="point"><b>01</b><div><strong>Made around you</strong><span>Flexible itineraries instead of one-size-fits-all packages.</span></div></div>
+        <div class="point"><b>02</b><div><strong>Local expertise</strong><span>UAE-focused knowledge from people who know the destination.</span></div></div>
+        <div class="point"><b>03</b><div><strong>One seamless journey</strong><span>Hotels, tours, transfers and support under one roof.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section" id="destinations">
+  <div class="container">
+    <div class="dest-head reveal">
+      <div>
+        <div class="eyebrow">Seven emirates · one extraordinary country</div>
+        <h2>Explore the <em>UAE.</em></h2>
+      </div>
+      <p class="dest-copy">From futuristic skylines to quiet mountain roads and golden desert evenings, every emirate has its own rhythm.</p>
+    </div>
+
+    <div class="destinations-grid">
+      <article class="destination reveal">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=90" alt="Dubai skyline">
+        <div class="destination-content"><small>Emirate 01</small><h3>Dubai</h3><p>Iconic architecture, shopping, beaches, dining and desert adventures.</p></div>
+        <span class="destination-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+      </article>
+
+      <article class="destination reveal">
+        <img src="https://images.unsplash.com/photo-1536501050161-9a4b4a2fce42?auto=format&fit=crop&w=1100&q=90" alt="Abu Dhabi Grand Mosque">
+        <div class="destination-content"><small>Emirate 02</small><h3>Abu Dhabi</h3><p>Culture, grand architecture, islands and refined experiences.</p></div>
+        <span class="destination-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+      </article>
+
+      <article class="destination reveal">
+        <img src="https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?auto=format&fit=crop&w=1100&q=90" alt="Ras Al Khaimah mountains">
+        <div class="destination-content"><small>Emirate 03</small><h3>Ras Al Khaimah</h3><p>Mountains, adventure, beaches and a slower side of the UAE.</p></div>
+        <span class="destination-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+      </article>
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+      <span class="tag" style="color:var(--muted);border-color:var(--line)">Sharjah</span>
+      <span class="tag" style="color:var(--muted);border-color:var(--line)">Fujairah</span>
+      <span class="tag" style="color:var(--muted);border-color:var(--line)">Ajman</span>
+      <span class="tag" style="color:var(--muted);border-color:var(--line)">Umm Al Quwain</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="service-head reveal">
+      <div>
+        <div class="eyebrow">Everything in one place</div>
+        <h2>Your complete<br><em>UAE travel partner.</em></h2>
+      </div>
+      <p>Whether you need a simple city break or a fully managed UAE holiday, we handle the details so you can enjoy the destination.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service reveal"><span class="service-num">01</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-passport"></i></div><h3>UAE Visa Assistance</h3><p>Clear guidance and documentation support for your UAE visit.</p></article>
+      <article class="service reveal"><span class="service-num">02</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-hotel"></i></div><h3>Hotels & Resorts</h3><p>From city hotels to beachfront resorts and luxury stays.</p></article>
+      <article class="service reveal"><span class="service-num">03</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-car"></i></div><h3>Airport Transfers</h3><p>Comfortable private transportation from arrival to departure.</p></article>
+      <article class="service reveal"><span class="service-num">04</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-ticket"></i></div><h3>Tickets & Attractions</h3><p>Theme parks, observation decks, shows and must-see attractions.</p></article>
+      <article class="service reveal"><span class="service-num">05</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-sun"></i></div><h3>Desert Safaris</h3><p>Sunset dunes, 4x4 adventures, camps and memorable evenings.</p></article>
+      <article class="service reveal"><span class="service-num">06</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div><h3>City Tours</h3><p>Private and guided experiences across the UAE's major cities.</p></article>
+      <article class="service reveal"><span class="service-num">07</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-ship"></i></div><h3>Yacht & Cruise</h3><p>Private cruises and coastal experiences around Dubai and Abu Dhabi.</p></article>
+      <article class="service reveal"><span class="service-num">08</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-people-group"></i></div><h3>Groups & Families</h3><p>Coordinated travel for families, groups, celebrations and events.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience">
+  <div class="experience-content">
+    <div class="eyebrow">Beyond the itinerary</div>
+    <h2>Experience the UAE<br><em>your way.</em></h2>
+    <div class="experience-bottom">
+      <p>Wake up above the skyline. Cross the desert at sunset. Spend a quiet afternoon by the sea. We build the UAE around the moments you actually want to remember.</p>
+      <div class="experience-tags">
+        <span class="tag">Desert Safaris</span><span class="tag">Luxury</span><span class="tag">Family</span><span class="tag">Culture</span><span class="tag">Adventure</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section" id="packages">
+  <div class="container">
+    <div class="package-head reveal">
+      <div>
+        <div class="eyebrow">Signature ideas</div>
+        <h2>Start with a<br><em>UAE classic.</em></h2>
+      </div>
+      <a href="#contact" class="btn btn-outline">Build a custom trip <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="package-grid">
+      <article class="package reveal">
+        <div class="package-img"><img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=90" alt="Dubai Marina and Palm"></div>
+        <span class="package-label">Most popular</span>
+        <div class="package-body"><div class="package-meta"><span>Dubai</span><span>4–5 nights</span></div><h3>Dubai, Beyond the Skyline</h3><p>Stay central, see the icons, discover the desert and leave room for the unexpected.</p><div class="package-foot"><span>Private · Customisable</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
+      </article>
+
+      <article class="package reveal">
+        <div class="package-img"><img src="https://images.unsplash.com/photo-1591218009875-aaebc6f4f3bb?auto=format&fit=crop&w=1200&q=90" alt="Abu Dhabi mosque"></div>
+        <div class="package-body"><div class="package-meta"><span>Abu Dhabi</span><span>3–4 nights</span></div><h3>Abu Dhabi, Refined</h3><p>Grand architecture, island escapes, cultural landmarks and a slower city rhythm.</p><div class="package-foot"><span>Culture · Luxury</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
+      </article>
+
+      <article class="package reveal">
+        <div class="package-img"><img src="https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?auto=format&fit=crop&w=1200&q=90" alt="Hajar mountains in Ras Al Khaimah"></div>
+        <div class="package-body"><div class="package-meta"><span>RAK + Dubai</span><span>6–7 nights</span></div><h3>City to Mountains</h3><p>Pair Dubai's energy with mountain views, nature, adventure and coastal calm.</p><div class="package-foot"><span>Adventure · Nature</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta reveal" id="contact">
+  <div class="cta-content">
+    <div class="eyebrow">Your UAE starts here</div>
+    <h2>Tell us what<br>you want to <em>feel.</em></h2>
+    <p>Tell us your dates, who you are travelling with and what kind of UAE experience you have in mind. We'll take it from there.</p>
+    <!-- Replace the number below with the real business WhatsApp number -->
+    <a class="btn btn-primary" href="https://wa.me/971500000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Plan my UAE trip</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>BEYOND<br>PARADISE</h3>
+        <p>A modern UAE tourism partner creating simple, seamless and memorable journeys across all seven emirates.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><a href="#about">About</a><a href="#destinations">Destinations</a><a href="#services">Services</a><a href="#packages">Packages</a></div>
+      <div class="footer-col"><h4>Services</h4><a href="#services">Visa Assistance</a><a href="#services">Hotels</a><a href="#services">Transfers</a><a href="#services">Tours</a></div>
+      <div class="footer-col"><h4>Contact</h4><p>Dubai, United Arab Emirates</p><a href="tel:+971500000000">+971 50 000 0000</a><a href="mailto:hello@beyondparadisetourism.com">hello@beyondparadisetourism.com</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Beyond Paradise Tourism. All rights reserved.</span><span>Dubai · United Arab Emirates</span></div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/971500000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+
+
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>35),{passive:true});
+
+const themeBtn=document.getElementById('themeBtn');
+const savedTheme=localStorage.getItem('bp-theme');
+if(savedTheme) document.body.dataset.theme=savedTheme;
+function updateThemeIcon(){
+  themeBtn.innerHTML=document.body.dataset.theme==='dark'
+    ? '<i class="fa-solid fa-sun"></i>'
+    : '<i class="fa-solid fa-moon"></i>';
+}
+updateThemeIcon();
+themeBtn.addEventListener('click',()=>{
+  const next=document.body.dataset.theme==='dark'?'light':'dark';
+  document.body.dataset.theme=next;
+  localStorage.setItem('bp-theme',next);
+  updateThemeIcon();
+});
+
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>{
+  mobileMenu.classList.toggle('open');
+  menuBtn.innerHTML=mobileMenu.classList.contains('open')
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mobileMenu.classList.remove('open');
+  menuBtn.innerHTML='<i class="fa-solid fa-bars"></i>';
+}));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
