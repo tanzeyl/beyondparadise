@@ -39,7 +39,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--bg);
+  background:#ffffff;
   color:var(--text);
   font-family:"DM Sans",sans-serif;
   overflow-x:hidden;
@@ -83,11 +83,10 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   display:flex;
   align-items:center;
   transition:.3s;
+  background: rgba(50, 50, 110, 1);
 }
 .nav.scrolled{
-  background:color-mix(in srgb,var(--bg) 82%,transparent);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line2);
+  background: rgba(50, 50, 110, 1);
 }
 .nav-inner{
   width:min(var(--max),calc(100% - 44px));
@@ -967,7 +966,7 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 }
 
 /* Brand palette refinements */
-.nav.scrolled{background:color-mix(in srgb,var(--navy) 88%,transparent)}
+.nav.scrolled{background: rgba(50, 50, 110, 1);}
 .btn-primary{background:var(--gold);color:var(--navy);border:1px solid var(--gold)}
 .btn-primary:hover{background:var(--gold-light);color:var(--navy)}
 .btn-outline{border-color:rgba(201,164,94,.35)}
@@ -984,6 +983,208 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 .cta{background:
   linear-gradient(90deg,rgba(4,14,28,.94),rgba(4,14,28,.40)),
   url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=2200&q=90") center/cover}
+
+
+/* =========================================================
+   LIGHT LUXURY THEME — warm ivory / navy / gold
+   ========================================================= */
+:root{
+  --bg:#f7f5ef;
+  --bg2:#ffffff;
+  --card:#ffffff;
+  --card2:#f1eee5;
+  --text:#0b1e38;
+  --muted:#66717f;
+  --soft:#263548;
+  --line:rgba(11,30,56,.12);
+  --line2:rgba(11,30,56,.075);
+  --green:#edf1f0;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+body:before{
+  opacity:.018;
+}
+
+.nav{
+  background:rgba(255,255,255,.92);
+  border-bottom:1px solid var(--line2);
+  box-shadow:0 8px 30px rgba(11,30,56,.045);
+  backdrop-filter:blur(16px);
+}
+.nav.scrolled{
+  background:rgba(255,255,255,.97);
+}
+.logo-text strong{color:var(--navy)}
+.logo-text small{color:var(--muted)}
+.nav-links a{color:#4f5b69}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{
+  color:var(--navy);
+  border-color:rgba(11,30,56,.13);
+}
+.nav-cta:hover{background:var(--navy);color:#fff}
+.icon-btn{
+  background:#fff;
+  color:var(--navy);
+  border-color:rgba(11,30,56,.12);
+}
+
+.hero{
+  background:
+    radial-gradient(ellipse at 73% 45%,rgba(201,164,94,.18) 0%,rgba(201,164,94,.07) 20%,transparent 43%),
+    radial-gradient(ellipse at 76% 72%,rgba(29,91,126,.11),transparent 42%),
+    linear-gradient(180deg,#fbfaf6 0%,#f7f5ef 55%,#eef2f2 100%);
+}
+.hero::before{
+  background:
+    radial-gradient(circle at 72% 43%,rgba(201,164,94,.10),transparent 27%),
+    linear-gradient(180deg,rgba(255,255,255,.25),transparent 30%,rgba(11,30,56,.035));
+}
+.hero::after{
+  background:radial-gradient(circle,rgba(201,164,94,.08),transparent 68%);
+}
+.hero h1 .muted-line{color:#718091}
+.hero-desc{color:rgba(11,30,56,.70)}
+.hero-note{color:#687482}
+.hero-note strong{color:var(--navy)}
+.hero-3d-caption{
+  background:rgba(255,255,255,.72);
+  border-color:rgba(11,30,56,.12);
+  color:#66717f;
+}
+.hero-location-card{
+  background:rgba(11,30,56,.78);
+}
+.scroll{color:#687482}
+.scroll:after{background:rgba(11,30,56,.16)}
+
+.intro{
+  background:#fff;
+  border-color:var(--line2);
+}
+.intro-visual{background:#edf0ed}
+.image-caption{
+  background:rgba(11,30,56,.72);
+}
+.intro-copy,.point span{color:var(--muted)}
+
+.attractions-section{
+  background:
+    radial-gradient(circle at 12% 18%,rgba(201,164,94,.08),transparent 30%),
+    linear-gradient(180deg,#f7f5ef,#f0f2ef);
+}
+.attraction-search-wrap{
+  background:rgba(255,255,255,.82);
+  box-shadow:0 18px 55px rgba(11,30,56,.07);
+}
+.attraction-search input{
+  background:#f7f7f3;
+  color:var(--navy);
+  border-color:rgba(11,30,56,.12);
+}
+.attraction-search input::placeholder{color:#8a939e}
+.attraction-category{color:#66717f}
+.attraction-card{
+  background:#fff;
+  box-shadow:0 8px 25px rgba(11,30,56,.035);
+}
+.attraction-card p,.attraction-count{color:var(--muted)}
+.attraction-badge{
+  background:rgba(11,30,56,.72);
+}
+.attraction-price{color:var(--navy)}
+.attraction-link{color:var(--gold);border-color:rgba(11,30,56,.12)}
+
+.services{
+  background:#fff;
+}
+.service:hover{background:#f4f2eb}
+.service p{color:var(--muted)}
+
+.package{
+  background:#fff;
+  box-shadow:0 8px 25px rgba(11,30,56,.035);
+}
+.package p,.package-foot span{color:var(--muted)}
+
+.partners-section{
+  background:#f1f2ef;
+}
+.partner-note{color:#7c858f}
+
+footer{
+  background:#fff;
+}
+.footer-brand p,.footer-col a,.footer-col p{color:var(--muted)}
+.footer-col a:hover{color: #e7eef7;}
+.socials a{color:#465364}
+
+.mobile-menu{
+  background:#fff;
+  box-shadow:0 20px 50px rgba(11,30,56,.14);
+}
+.mobile-menu a{color:var(--navy)}
+
+.whatsapp{
+  background:var(--navy);
+  color:#fff;
+}
+
+/* =========================================================
+   SCROLL BRAND TRANSITION
+   Large logo makes one complete loop, then settles into
+   the exact position/scale of the navigation logo.
+   ========================================================= */
+.brand-transition{
+  pointer-events:none;
+  cursor:default;
+  background:
+    radial-gradient(circle at 50% 44%,rgba(201,164,94,.13),transparent 34%),
+    linear-gradient(180deg,#fbfaf6,#f2f0e8);
+}
+.brand-transition::after{
+  background:radial-gradient(circle at 50% 50%,transparent 0 28%,rgba(11,30,56,.025) 75%,rgba(11,30,56,.055));
+}
+.brand-orbit{
+  border-color:rgba(201,164,94,.16);
+  box-shadow:0 0 100px rgba(201,164,94,.08);
+}
+.brand-orbit::before{border-color:rgba(201,164,94,.10)}
+.brand-orbit::after{border-color:rgba(201,164,94,.07)}
+.brand-arc{opacity:.8}
+.brand-arc path{
+  stroke:var(--gold);
+  stroke-dasharray:none;
+  stroke-dashoffset:0;
+  opacity:.25;
+}
+.brand-mark{
+  width:min(43vw,430px);
+  z-index:5;
+  transform-origin:center center;
+}
+.brand-mark img{
+  filter:drop-shadow(0 18px 45px rgba(11,30,56,.16));
+}
+.brand-mark .intro-nav-logo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  opacity:0;
+}
+.brand-caption{color:rgba(11,30,56,.48)}
+.brand-hint{display:none}
+
+@media(max-width:640px){
+  .brand-mark{width:min(62vw,330px)}
+}
 
 /* RESPONSIVE */
 @media(max-width:1000px){
@@ -1037,6 +1238,48 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
   .footer-bottom{flex-direction:column;gap:8px}
 }
 
+.hero-visual{
+  height:700px;
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  isolation:isolate;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,14,28,.18),
+      rgba(4,14,28,.02) 45%,
+      rgba(4,14,28,.25)
+    ),
+    url("assets/dubai skyline.jpg")
+    center center / cover no-repeat;
+}
+
+/* subtle cinematic overlay */
+.hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4,14,28,.08) 0%,
+      transparent 35%,
+      rgba(4,14,28,.42) 100%
+    );
+}
+
+/* keep the UI elements above the image */
+.hero-location-card,
+.hero-image-credit,
+.hero-visual .scroll{
+  z-index:2;
+}
+
 /* Mobile dropdown */
 .mobile-menu{
   position:fixed;z-index:99;top:68px;left:14px;right:14px;
@@ -1053,28 +1296,50 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 @keyframes spin3{to{transform:rotateY(427deg) rotateX(9deg)}}
 
 .mainLogo{border-radius:50%}
+
+/* FINAL BRAND TRANSITION OVERRIDE — invisible loop, minimal rotation */
+.brand-transition{
+  pointer-events:none;
+  cursor:default;
+}
+.brand-orbit,.brand-arc{
+  display:none !important;
+}
+.brand-mark{
+  width:min(43vw,430px);
+  transform-origin:center center;
+  will-change:left,top,transform,opacity;
+}
+.brand-mark .mainLogo,
+.brand-mark .intro-nav-logo{
+  backface-visibility:hidden;
+}
+.brand-mark .intro-nav-logo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  opacity:0;
+}
+.brand-caption{
+  pointer-events:none;
+}
+@media(max-width:640px){
+  .brand-mark{width:min(62vw,330px)}
+}
 </style>
 </head>
 
 <body>
-<!-- BRAND INTRO / SCROLL TRANSITION -->
-<div class="brand-transition" id="brandTransition" role="button" tabindex="0"
-     aria-label="Enter Beyond Paradise Tourism website">
-  <div class="brand-orbit"></div>
-
-  <svg class="brand-arc" viewBox="0 0 980 720" preserveAspectRatio="none" aria-hidden="true">
-    <path id="flightPath" d="M 490 360 C 600 70 820 55 930 230"></path>
-    <animateMotion class="svg-plane-motion" href="#flightPath" xlink:href="#flightPath"
-      dur="1s" begin="indefinite" rotate="auto" fill="freeze">
-    </animateMotion>
-  </svg>
-
-  <div class="brand-mark">
+<!-- BRAND INTRO / SCROLL LOOP TRANSITION -->
+<div class="brand-transition" id="brandTransition" aria-hidden="true">
+  <div class="brand-mark" id="brandMark">
     <img class="mainLogo" src="assets/logo1.jpg" alt="Beyond Paradise Tourism">
+    <img class="intro-nav-logo" src="assets/NavLogo.png" alt="" aria-hidden="true">
   </div>
 
   <div class="brand-caption">UNITED ARAB EMIRATES · TOURISM LLC</div>
-  <div class="brand-hint"><i class="fa-solid fa-arrow-pointer"></i> Click to begin</div>
 </div>
 
 
@@ -1132,65 +1397,22 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
     </div>
 
     <!-- Pure HTML/CSS cinematic Dubai skyline -->
-    <div class="hero-visual reveal" aria-label="Stylized Dubai skyline">
-      <div class="sun-glow"></div>
-      <div class="horizon-glow"></div>
+    <div class="hero-visual reveal visible" aria-label="Dubai skyline">
+  <div class="hero-location-card">
+    <span class="location-line"></span>
 
-      <div class="skyline skyline-back">
-        <i style="--x:3%;--w:30px;--h:110px"></i>
-        <i style="--x:9%;--w:45px;--h:160px"></i>
-        <i style="--x:16%;--w:34px;--h:135px"></i>
-        <i style="--x:23%;--w:55px;--h:190px"></i>
-        <i style="--x:31%;--w:38px;--h:150px"></i>
-        <i style="--x:39%;--w:60px;--h:220px"></i>
-        <i style="--x:48%;--w:42px;--h:175px"></i>
-        <i style="--x:56%;--w:48px;--h:205px"></i>
-        <i style="--x:65%;--w:35px;--h:150px"></i>
-        <i style="--x:72%;--w:58px;--h:195px"></i>
-        <i style="--x:82%;--w:40px;--h:160px"></i>
-        <i style="--x:90%;--w:62px;--h:205px"></i>
-      </div>
-
-      <div class="water"></div>
-
-      <div class="skyline skyline-front">
-        <i style="--x:0%;--w:42px;--h:170px"></i>
-        <i style="--x:7%;--w:68px;--h:220px"></i>
-        <i style="--x:17%;--w:48px;--h:280px"></i>
-        <i style="--x:26%;--w:72px;--h:205px"></i>
-        <i style="--x:36%;--w:55px;--h:315px"></i>
-        <i style="--x:46%;--w:50px;--h:250px"></i>
-        <i style="--x:55%;--w:78px;--h:185px"></i>
-        <i style="--x:66%;--w:58px;--h:300px"></i>
-        <i style="--x:76%;--w:72px;--h:220px"></i>
-        <i style="--x:87%;--w:50px;--h:275px"></i>
-        <i style="--x:96%;--w:65px;--h:195px"></i>
-      </div>
-
-      <div class="burj">
-        <span class="burj-tier t1"></span>
-        <span class="burj-tier t2"></span>
-        <span class="burj-tier t3"></span>
-        <span class="burj-tier t4"></span>
-        <span class="burj-tier t5"></span>
-        <span class="burj-spire"></span>
-      </div>
-
-      <div class="reflection r1"></div>
-      <div class="reflection r2"></div>
-      <div class="reflection r3"></div>
-
-      <div class="hero-location-card">
-        <span class="location-line"></span>
-        <div>
-          <small>YOUR NEXT ESCAPE</small>
-          <strong>Dubai · UAE</strong>
-        </div>
-        <i class="fa-solid fa-arrow-up-right"></i>
-      </div>
-      <div class="hero-image-credit">DUBAI · UNITED ARAB EMIRATES</div>
-      <div class="scroll">SCROLL TO DISCOVER</div>
+    <div>
+      <small>YOUR NEXT ESCAPE</small>
+      <strong>Dubai · UAE</strong>
     </div>
+
+    <i class="fa-solid fa-arrow-up-right"></i>
+  </div>
+
+  <div class="scroll">
+    SCROLL TO DISCOVER
+  </div>
+</div>
   </div>
 </section>
 
@@ -1201,16 +1423,16 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
       <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=90" alt="Dubai skyline at night">
       <div class="image-caption"><i class="fa-solid fa-location-dot"></i> Dubai · UAE</div>
     </div>
-    <div class="reveal">
+    <div class="reveal" style="background-color: #071b34; padding: 2%; border-radius: 18px;">
       <div class="eyebrow">The Beyond Paradise way</div>
-      <h2>Leave the planning to <em>us.</em></h2>
+      <h2 style="color: #e7eef7;">Leave the planning to <em>us.</em></h2>
       <p class="intro-copy">
         We make exploring the UAE feel simple. From the first idea to your airport transfer home, one team brings together hotels, experiences, transportation and local support.
       </p>
       <div class="points">
-        <div class="point"><b>01</b><div><strong>Made around you</strong><span>Flexible itineraries instead of one-size-fits-all packages.</span></div></div>
-        <div class="point"><b>02</b><div><strong>Local expertise</strong><span>UAE-focused knowledge from people who know the destination.</span></div></div>
-        <div class="point"><b>03</b><div><strong>One seamless journey</strong><span>Hotels, tours, transfers and support under one roof.</span></div></div>
+        <div class="point"><b>01</b><div><strong style="color: #e7eef7;">Made around you</strong><span>Flexible itineraries instead of one-size-fits-all packages.</span></div></div>
+        <div class="point"><b>02</b><div><strong style="color: #e7eef7;">Local expertise</strong><span>UAE-focused knowledge from people who know the destination.</span></div></div>
+        <div class="point"><b>03</b><div><strong style="color: #e7eef7;">One seamless journey</strong><span>Hotels, tours, transfers and support under one roof.</span></div></div>
       </div>
     </div>
   </div>
@@ -1231,7 +1453,7 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
       </p>
     </div>
 
-    <div class="attraction-search-wrap reveal">
+    <div class="attraction-search-wrap reveal" style="background-color: #071b34;">
       <form class="attraction-search" id="attractionSearch">
         <input
           id="attractionQuery"
@@ -1266,145 +1488,145 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
     </div>
 
     <div class="attraction-grid" id="attractionGrid">
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="theme"
                data-search="img worlds of adventure dubai theme park indoor family rides">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=900&q=85" alt="Theme park experience">
+          <img src="assets/imgAdventure.jpg">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · Theme Park</span>
-          <h4>IMG Worlds of Adventure</h4>
+          <h4 style="color: #e7eef7;">IMG Worlds of Adventure</h4>
           <p>Indoor thrills, rides and entertainment for the whole family.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Enquire<strong> Now</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Enquire<strong> Now</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about IMG Worlds of Adventure"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
 
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="indoor"
                data-search="aya universe dubai indoor immersive digital art family">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85" alt="Immersive indoor experience">
+          <img src="assets/aya.jpg" alt="Immersive indoor experience">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · Indoor</span>
-          <h4>AYA Universe</h4>
+          <h4 style="color: #e7eef7;">AYA Universe</h4>
           <p>Immersive digital worlds filled with light, sound and movement.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Enquire<strong> Now</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Enquire<strong> Now</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about AYA Universe"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
 
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="culture"
                data-search="museum of future dubai museum culture landmark">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85" alt="Dubai landmark">
+          <img src="assets/future.jpg" alt="Dubai landmark">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · Museum</span>
-          <h4>Museum of the Future</h4>
+          <h4 style="color: #e7eef7;">Museum of the Future</h4>
           <p>A landmark journey into future technology, design and ideas.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Enquire<strong> Now</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Enquire<strong> Now</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about Museum of the Future"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
 
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="water"
                data-search="atlantis aquaventure dubai water activities waterpark family">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=85" alt="Water activity">
+          <img src="assets/aquaventure.jpg" alt="Water activity">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · Water</span>
-          <h4>Aquaventure Waterpark</h4>
+          <h4 style="color: #e7eef7;">Aquaventure Waterpark</h4>
           <p>Slides, pools, beaches and full-day aquatic adventure.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Enquire <strong>Now</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about Aquaventure Waterpark"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
 
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="cruise"
                data-search="dubai marina dinner cruise dhow cruise dinner">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85" alt="Dubai evening cruise">
+          <img src="assets/marina.jpg" alt="Dubai evening cruise">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · Cruise</span>
-          <h4>Marina Dinner Cruise</h4>
+          <h4 style="color: #e7eef7;">Marina Dinner Cruise</h4>
           <p>See Dubai's illuminated skyline from the water with dinner.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Enquire <strong>Now</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about Marina Dinner Cruise"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
 
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="city"
                data-search="dubai city tour burj khalifa palm jumeirah landmarks">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai city tour">
+          <img src="assets/city.jpg" alt="Dubai city tour">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · City Tour</span>
-          <h4>Dubai City Tour</h4>
+          <h4 style="color: #e7eef7;">Dubai City Tour</h4>
           <p>Discover iconic landmarks, old Dubai and the city's modern side.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Private <strong>Tour</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Private <strong>Tour</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about Dubai City Tour"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
 
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="snow"
                data-search="ski dubai snow activities mall of emirates indoor skiing">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=85" alt="Snow activity">
+          <img src="assets/ski.jpg" alt="Snow activity">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · Snow</span>
-          <h4>Ski Dubai</h4>
+          <h4 style="color: #e7eef7;">Ski Dubai</h4>
           <p>Indoor snow, slopes and winter activities in the heart of Dubai.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Enquire <strong>Now</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about Ski Dubai"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </article>
 
-      <article class="attraction-card reveal"
+      <article class="attraction-card reveal" style="background-color: #071b34;"
                data-category="nature"
                data-search="green planet dubai garden nature rainforest animals">
         <div class="attraction-img">
-          <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=900&q=85" alt="Indoor rainforest experience">
+          <img src="assets/green.jpg" alt="Indoor rainforest experience">
           <span class="attraction-badge">Dubai</span>
         </div>
         <div class="attraction-body">
           <span class="attraction-location">Dubai · Nature</span>
-          <h4>The Green Planet</h4>
+          <h4 style="color: #e7eef7;">The Green Planet</h4>
           <p>Explore an indoor tropical rainforest and discover exotic wildlife.</p>
           <div class="attraction-foot">
-            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <span class="attraction-price" style="color: #e7eef7;">Enquire <strong>Now</strong></span>
             <a class="attraction-link" href="#contact" aria-label="Enquire about The Green Planet"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
@@ -1420,30 +1642,30 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 
 <!-- DESTINATIONS -->
 <section class="section" id="destinations">
-  <div class="container">
+  <div class="container" style="background-color: #071b34; padding: 2%; border-radius: 18px;">
     <div class="dest-head reveal">
       <div>
         <div class="eyebrow">Seven emirates · one extraordinary country</div>
-        <h2>Explore the <em>UAE.</em></h2>
+        <h2 style="color: #e7eef7;">Explore the <em>UAE.</em></h2>
       </div>
-      <p class="dest-copy">From futuristic skylines to quiet mountain roads and golden desert evenings, every emirate has its own rhythm.</p>
+      <p class="dest-copy" style="color: #e7eef7;">From futuristic skylines to quiet mountain roads and golden desert evenings, every emirate has its own rhythm.</p>
     </div>
 
-    <div class="destinations-grid">
+    <div class="destinations-grid" >
       <article class="destination reveal">
         <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=90" alt="Dubai skyline">
-        <div class="destination-content"><small>Emirate 01</small><h3>Dubai</h3><p>Iconic architecture, shopping, beaches, dining and desert adventures.</p></div>
+        <div class="destination-content"><small>Emirate 01</small><h3 style="color: #e7eef7;">Dubai</h3><p>Iconic architecture, shopping, beaches, dining and desert adventures.</p></div>
         <span class="destination-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
       </article>
 
       <article class="destination reveal">
         <img src="assets/abudhabi.jpg" alt="Abu Dhabi Grand Mosque">
-        <div class="destination-content"><small>Emirate 02</small><h3>Abu Dhabi</h3><p>Culture, grand architecture, islands and refined experiences.</p></div>
+        <div class="destination-content"><small>Emirate 02</small><h3 style="color: #e7eef7;">Abu Dhabi</h3><p>Culture, grand architecture, islands and refined experiences.</p></div>
         <span class="destination-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
       </article>
 
       <article class="destination reveal">
-        <img src="https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?auto=format&fit=crop&w=1100&q=90" alt="Ras Al Khaimah mountains">
+        <img src="assets/rasalkhaimah.jpg" alt="Ras Al Khaimah mountains">
         <div class="destination-content"><small>Emirate 03</small><h3>Ras Al Khaimah</h3><p>Mountains, adventure, beaches and a slower side of the UAE.</p></div>
         <span class="destination-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
       </article>
@@ -1470,14 +1692,14 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
     </div>
 
     <div class="service-grid">
-      <article class="service reveal"><span class="service-num">01</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-passport"></i></div><h3>UAE Visa Assistance</h3><p>Clear guidance and documentation support for your UAE visit.</p></article>
-      <article class="service reveal"><span class="service-num">02</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-hotel"></i></div><h3>Hotels & Resorts</h3><p>From city hotels to beachfront resorts and luxury stays.</p></article>
-      <article class="service reveal"><span class="service-num">03</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-car"></i></div><h3>Airport Transfers</h3><p>Comfortable private transportation from arrival to departure.</p></article>
-      <article class="service reveal"><span class="service-num">04</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-ticket"></i></div><h3>Tickets & Attractions</h3><p>Theme parks, observation decks, shows and must-see attractions.</p></article>
-      <article class="service reveal"><span class="service-num">05</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-sun"></i></div><h3>Desert Safaris</h3><p>Sunset dunes, 4x4 adventures, camps and memorable evenings.</p></article>
-      <article class="service reveal"><span class="service-num">06</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div><h3>City Tours</h3><p>Private and guided experiences across the UAE's major cities.</p></article>
-      <article class="service reveal"><span class="service-num">07</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-ship"></i></div><h3>Yacht & Cruise</h3><p>Private cruises and coastal experiences around Dubai and Abu Dhabi.</p></article>
-      <article class="service reveal"><span class="service-num">08</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-people-group"></i></div><h3>Groups & Families</h3><p>Coordinated travel for families, groups, celebrations and events.</p></article>
+      <article class="service reveal" style="background-color: #071b34; border: 1px solid white"><span class="service-num">01</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-passport"></i></div><h3 style="color: #e7eef7;">UAE Visa Assistance</h3><p style="color: #e7eef7;">Clear guidance and documentation support for your UAE visit.</p></article>
+      <article class="service reveal"  style="background-color: #071b34;"><span class="service-num">02</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-hotel"></i></div><h3 style="color: #e7eef7;">Hotels & Resorts</h3><p style="color: #e7eef7;">From city hotels to beachfront resorts and luxury stays.</p></article>
+      <article class="service reveal" style="background-color: #071b34; border: 1px solid white"><span class="service-num">03</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-car"></i></div><h3 style="color: #e7eef7;">Airport Transfers</h3><p style="color: #e7eef7;">Comfortable private transportation from arrival to departure.</p></article>
+      <article class="service reveal" style="background-color: #071b34; border: 1px solid white"><span class="service-num">04</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-ticket"></i></div><h3 style="color: #e7eef7;">Tickets & Attractions</h3><p style="color: #e7eef7;">Theme parks, observation decks, shows and must-see attractions.</p></article>
+      <article class="service reveal" style="background-color: #071b34; border: 1px solid white"><span class="service-num">05</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-sun"></i></div><h3 style="color: #e7eef7;">Desert Safaris</h3><p style="color: #e7eef7;">Sunset dunes, 4x4 adventures, camps and memorable evenings.</p></article>
+      <article class="service reveal" style="background-color: #071b34; border: 1px solid white"><span class="service-num">06</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div><h3 style="color: #e7eef7;">City Tours</h3><p style="color: #e7eef7;">Private and guided experiences across the UAE's major cities.</p></article>
+      <article class="service reveal" style="background-color: #071b34; border: 1px solid white"><span class="service-num">07</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-ship"></i></div><h3 style="color: #e7eef7;">Yacht & Cruise</h3><p style="color: #e7eef7;">Private cruises and coastal experiences around Dubai and Abu Dhabi.</p></article>
+      <article class="service reveal" style="background-color: #071b34; border: 1px solid white"><span class="service-num">08</span><span class="arrow">↗</span><div class="service-icon"><i class="fa-solid fa-people-group"></i></div><h3 style="color: #e7eef7;">Groups & Families</h3><p style="color: #e7eef7;">Coordinated travel for families, groups, celebrations and events.</p></article>
     </div>
   </div>
 </section>
@@ -1508,20 +1730,20 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
     </div>
 
     <div class="package-grid">
-      <article class="package reveal">
+      <article class="package reveal" style="background-color: #071b34;">
         <div class="package-img"><img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=90" alt="Dubai Marina and Palm"></div>
         <span class="package-label">Most popular</span>
-        <div class="package-body"><div class="package-meta"><span>Dubai</span><span>4–5 nights</span></div><h3>Dubai, Beyond the Skyline</h3><p>Stay central, see the icons, discover the desert and leave room for the unexpected.</p><div class="package-foot"><span>Private · Customisable</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
+        <div class="package-body"><div class="package-meta"><span>Dubai</span><span>4–5 nights</span></div><h3 style="color: #e7eef7;">Dubai, Beyond the Skyline</h3><p>Stay central, see the icons, discover the desert and leave room for the unexpected.</p><div class="package-foot"><span>Private · Customisable</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
       </article>
 
-      <article class="package reveal">
+      <article class="package reveal" style="background-color: #071b34;">
         <div class="package-img"><img src="assets/abudhabi.jpg" alt="Abu Dhabi mosque"></div>
-        <div class="package-body"><div class="package-meta"><span>Abu Dhabi</span><span>3–4 nights</span></div><h3>Abu Dhabi, Refined</h3><p>Grand architecture, island escapes, cultural landmarks and a slower city rhythm.</p><div class="package-foot"><span>Culture · Luxury</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
+        <div class="package-body"><div class="package-meta"><span>Abu Dhabi</span><span>3–4 nights</span></div><h3 style="color: #e7eef7;">Abu Dhabi, Refined</h3><p>Grand architecture, island escapes, cultural landmarks and a slower city rhythm.</p><div class="package-foot"><span>Culture · Luxury</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
       </article>
 
-      <article class="package reveal">
-        <div class="package-img"><img src="https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?auto=format&fit=crop&w=1200&q=90" alt="Hajar mountains in Ras Al Khaimah"></div>
-        <div class="package-body"><div class="package-meta"><span>RAK + Dubai</span><span>6–7 nights</span></div><h3>City to Mountains</h3><p>Pair Dubai's energy with mountain views, nature, adventure and coastal calm.</p><div class="package-foot"><span>Adventure · Nature</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
+      <article class="package reveal" style="background-color: #071b34;">
+        <div class="package-img"><img src="assets/rasalkhaimah.jpg" alt="Hajar mountains in Ras Al Khaimah"></div>
+        <div class="package-body"><div class="package-meta"><span>RAK + Dubai</span><span>6–7 nights</span></div><h3 style="color: #e7eef7;">City to Mountains</h3><p>Pair Dubai's energy with mountain views, nature, adventure and coastal calm.</p><div class="package-foot"><span>Adventure · Nature</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
       </article>
     </div>
   </div>
@@ -1530,11 +1752,11 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 
 <!-- PARTNERS -->
 <section class="section partners-section" id="partners">
-  <div class="container">
+  <div class="container"  style="background-color: #071b34; padding: 2%; border-radius: 18px;">
     <div class="partners-head reveal">
       <div>
         <div class="eyebrow">Trusted attraction partners</div>
-        <h2>Our <em>partners.</em></h2>
+        <h2 style="color: #e7eef7;">Our <em>partners.</em></h2>
       </div>
       <p class="partners-copy">
         We work with some of the UAE's best-known attractions and experiences to help make every Beyond Paradise journey seamless.
@@ -1592,10 +1814,10 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 </main>
 
 <footer>
-  <div class="container">
+  <div class="container"  style="background-color: #071b34; padding: 2%; border-radius: 18px;">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>BEYOND<br>PARADISE</h3>
+        <h3 style="color: #e7eef7;">BEYOND<br>PARADISE</h3>
         <p>A modern UAE tourism partner creating simple, seamless and memorable journeys across all seven emirates.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -1645,70 +1867,98 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 
 const brandTransition=document.getElementById('brandTransition');
-const brandMark=document.querySelector('.brand-mark');
-const flightPath=document.getElementById('flightPath');
-const svgPlane=document.querySelector('.svg-plane');
-const arcSvg=document.querySelector('.brand-arc');
+const brandMark=document.getElementById('brandMark');
+const brandMainLogo=brandMark.querySelector('.mainLogo');
+const brandNavLogo=brandMark.querySelector('.intro-nav-logo');
+let brandStarted=false;
+
+function easeInOut(t){
+  return t < .5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2;
+}
 
 function launchBrand(){
-  if(brandTransition.classList.contains('launching')) return;
-  brandTransition.classList.add('launching');
+  if(brandStarted) return;
+  brandStarted=true;
 
+  const duration=1550;
+  const loopDuration=1050;
+  const settleDuration=500;
   const start=performance.now();
-  const duration=1000;
-  const total=flightPath.getTotalLength();
+  const navLogo=document.querySelector('.nav-logo-wordmark');
 
-  // The logo follows the exact SVG flight path, so it truly traces the arc.
-  function animateLogo(now){
-    const progress=Math.min((now-start)/duration,1);
-    const eased=progress < .5
-      ? 2*progress*progress
-      : 1-Math.pow(-2*progress+2,2)/2;
+  // Hide the real nav logo while the large logo travels into its position.
+  if(navLogo){
+    navLogo.style.opacity='0';
+    navLogo.style.transition='none';
+  }
 
-    const distance=total*eased;
-    const point=flightPath.getPointAtLength(distance);
-    const next=flightPath.getPointAtLength(Math.min(distance+2,total));
-    const angle=Math.atan2(next.y-point.y,next.x-point.x)*180/Math.PI;
+  const centerX=window.innerWidth/2;
+  const centerY=window.innerHeight/2;
+  const radiusX=Math.min(window.innerWidth*.22,220);
+  const radiusY=Math.min(window.innerHeight*.20,150);
 
-    const rect=arcSvg.getBoundingClientRect();
-    const x=rect.left + (point.x/980)*rect.width;
-    const y=rect.top + (point.y/720)*rect.height;
+  function animateBrand(now){
+    const elapsed=now-start;
+    const progress=Math.min(elapsed/duration,1);
+    let x=centerX, y=centerY, scale=1, rotation=0;
 
-    const scale=1-eased*.82;
+    if(elapsed < loopDuration){
+      // One smooth, invisible loop that starts and ends at the center.
+      // The logo only tilts a few degrees instead of spinning.
+      const t=easeInOut(elapsed/loopDuration);
+      const angle=2*Math.PI*t;
+      x=centerX + radiusX*Math.sin(angle);
+      y=centerY + radiusY*(1-Math.cos(angle));
+      scale=1 - .10*t;
+      rotation=Math.sin(angle)*3;
+    }else{
+      // Finish from the end of the loop into the exact navbar logo position.
+      const t=easeInOut((elapsed-loopDuration)/settleDuration);
+      // The loop returns exactly to the center before the logo settles into the nav.
+      const loopX=centerX;
+      const loopY=centerY;
+      const navRect=navLogo ? navLogo.getBoundingClientRect() : {left:22,top:20,width:154,height:40};
+      const targetX=navRect.left + navRect.width/2;
+      const targetY=navRect.top + navRect.height/2;
+
+      x=loopX + (targetX-loopX)*t;
+      y=loopY + (targetY-loopY)*t;
+      scale=.90 + ((Math.max(navRect.width/430,.18)-.90)*t);
+      rotation=4*(1-t);
+    }
+
     brandMark.style.left=x+'px';
     brandMark.style.top=y+'px';
-    brandMark.style.transform=`translate(-50%,-50%) rotate(${angle}deg) scale(${scale})`;
-    brandMark.style.opacity=String(1-eased*.12);
+    brandMark.style.transform=`translate(-50%,-50%) rotate(${rotation}deg) scale(${scale})`;
+
+    if(elapsed < loopDuration){
+      brandMainLogo.style.opacity='1';
+      brandNavLogo.style.opacity='0';
+    }else{
+      const t=Math.min((elapsed-loopDuration)/settleDuration,1);
+      brandMainLogo.style.opacity=String(1-t);
+      brandNavLogo.style.opacity=String(t);
+    }
 
     if(progress<1){
-      requestAnimationFrame(animateLogo);
+      requestAnimationFrame(animateBrand);
     }else{
       brandMark.style.opacity='0';
+      brandTransition.classList.add('hidden');
+      if(navLogo){
+        navLogo.style.opacity='1';
+        navLogo.style.transition='opacity .2s ease';
+      }
     }
   }
 
-  requestAnimationFrame(animateLogo);
-
-  // Start the SVG airplane travelling over the same path.
-  const motion=arcSvg.querySelector('.svg-plane-motion');
-  if(motion){
-    motion.setAttribute('dur','1s');
-    motion.beginElement();
-  }
-
-  window.setTimeout(()=>{
-    brandTransition.classList.add('hidden');
-  },1000);
+  requestAnimationFrame(animateBrand);
 }
 
-brandTransition.addEventListener('click',launchBrand);
-brandTransition.addEventListener('keydown',(e)=>{
-  if(e.key==='Enter' || e.key===' '){
-    e.preventDefault();
-    launchBrand();
-  }
-});
-
+// Start automatically when the visitor begins scrolling. No click trigger.
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 18) launchBrand();
+},{passive:true});
 
 // ATTRACTIONS: client-side search + category filters
 const attractionSearch = document.getElementById('attractionSearch');
