@@ -13,37 +13,28 @@
 
 <style>
 :root{
-  --bg:#070909;
-  --bg2:#0c0f0e;
-  --card:#101413;
-  --card2:#141918;
-  --text:#f3f0e9;
-  --muted:#929b96;
-  --soft:#c8ccc7;
-  --line:rgba(255,255,255,.10);
-  --line2:rgba(255,255,255,.06);
-  --gold:#d9b47a;
-  --gold2:#f0d4a4;
-  --green:#18372f;
+  --navy:#071b34;
+  --navy-2:#0b2748;
+  --navy-3:#102f52;
+  --gold:#c9a45e;
+  --gold-light:#e1c47e;
+  --cream:#f7f2e7;
+  --cream-2:#eee6d6;
+  --bg:var(--navy);
+  --bg2:#091f3a;
+  --card:#0c2745;
+  --card2:#102e4e;
+  --text:var(--cream);
+  --muted:#aeb9c5;
+  --soft:#d4dbe2;
+  --line:rgba(225,196,126,.18);
+  --line2:rgba(225,196,126,.10);
+  --green:#123754;
   --max:1180px;
   --radius:24px;
   --ease:cubic-bezier(.2,.8,.2,1);
 }
 
-[data-theme="light"]{
-  --bg:#f6f4ef;
-  --bg2:#eeece6;
-  --card:#fff;
-  --card2:#f3f1eb;
-  --text:#111715;
-  --muted:#66706b;
-  --soft:#4d5752;
-  --line:rgba(17,23,21,.11);
-  --line2:rgba(17,23,21,.06);
-  --gold:#9b6b32;
-  --gold2:#bd884b;
-  --green:#dfe7e2;
-}
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -144,7 +135,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   background:
     radial-gradient(ellipse at 73% 62%, rgba(214,160,83,.20) 0%, rgba(214,160,83,.07) 20%, transparent 43%),
     radial-gradient(ellipse at 75% 72%, rgba(17,71,62,.34), transparent 42%),
-    linear-gradient(180deg,#030707 0%,#07100e 45%,#0a1714 100%);
+    linear-gradient(180deg,#030707 0%,#071b34 45%,#0a1714 100%);
 }
 .hero::before{
   content:"";
@@ -152,7 +143,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   inset:0;
   z-index:-1;
   background:
-    radial-gradient(circle at 72% 43%, rgba(217,180,122,.13), transparent 27%),
+    radial-gradient(circle at 72% 43%, rgba(201,164,94,.13), transparent 27%),
     linear-gradient(180deg, rgba(0,0,0,.16), transparent 30%, rgba(0,0,0,.18));
   pointer-events:none;
 }
@@ -164,7 +155,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   bottom:-30%;
   width:70%;
   height:70%;
-  background:radial-gradient(circle, rgba(217,180,122,.10), transparent 68%);
+  background:radial-gradient(circle, rgba(201,164,94,.10), transparent 68%);
   filter:blur(45px);
   pointer-events:none;
 }
@@ -227,7 +218,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   position:absolute;
   right:15px;
   top:23%;
-  color:var(--gold2);
+  color:var(--gold-light);
   font-size:9px;
   letter-spacing:.25em;
   text-transform:uppercase;
@@ -268,7 +259,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   width:280px;height:280px;
   border-radius:50%;
   left:57%;top:28%;
-  background:radial-gradient(circle,rgba(240,190,108,.25),rgba(240,190,108,.06) 34%,transparent 70%);
+  background:radial-gradient(circle,rgba(201,164,94,.25),rgba(201,164,94,.06) 34%,transparent 70%);
   filter:blur(5px);
 }
 .horizon-glow{
@@ -290,8 +281,8 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   bottom:0;
   width:var(--w);
   height:var(--h);
-  background:linear-gradient(90deg,#07100e,#14231f 45%,#08110f);
-  border:1px solid rgba(217,180,122,.08);
+  background:linear-gradient(90deg,#071b34,#0f3155 45%,#081f3b);
+  border:1px solid rgba(201,164,94,.08);
   border-bottom:0;
   border-radius:2px 2px 0 0;
   box-shadow:inset 5px 0 10px rgba(255,255,255,.025);
@@ -318,13 +309,13 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   height:28%;
   background:
     linear-gradient(180deg,rgba(7,20,17,.2),rgba(3,9,8,.88)),
-    repeating-linear-gradient(90deg,transparent 0 45px,rgba(217,180,122,.025) 46px 47px);
+    repeating-linear-gradient(90deg,transparent 0 45px,rgba(201,164,94,.025) 46px 47px);
 }
 .water:before{
   content:"";
   position:absolute;
   top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(217,180,122,.28),transparent);
+  background:linear-gradient(90deg,transparent,rgba(201,164,94,.28),transparent);
 }
 
 .burj{
@@ -335,17 +326,17 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   width:92px;
   height:560px;
   transform:translateX(-50%);
-  filter:drop-shadow(0 0 22px rgba(217,180,122,.10));
+  filter:drop-shadow(0 0 22px rgba(201,164,94,.10));
 }
 .burj-tier{
   position:absolute;
   left:50%;
   transform:translateX(-50%);
   bottom:0;
-  background:linear-gradient(90deg,#091411,#315449 45%,#0b1613);
+  background:linear-gradient(90deg,#0a2340,#214b70 45%,#0a213d);
   clip-path:polygon(50% 0,72% 9%,84% 100%,16% 100%,28% 9%);
-  border-left:1px solid rgba(217,180,122,.20);
-  border-right:1px solid rgba(217,180,122,.10);
+  border-left:1px solid rgba(201,164,94,.20);
+  border-right:1px solid rgba(201,164,94,.10);
 }
 .burj-tier:after{
   content:"";
@@ -362,7 +353,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   position:absolute;left:50%;bottom:505px;
   width:2px;height:62px;transform:translateX(-50%);
   background:linear-gradient(transparent,var(--gold));
-  box-shadow:0 0 10px rgba(217,180,122,.45)
+  box-shadow:0 0 10px rgba(201,164,94,.45)
 }
 
 .reflection{
@@ -372,7 +363,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
   left:62%;
   transform:translateX(-50%);
   height:155px;
-  background:linear-gradient(180deg,rgba(217,180,122,.14),transparent);
+  background:linear-gradient(180deg,rgba(201,164,94,.14),transparent);
   filter:blur(5px);
 }
 .reflection.r1{width:48px}
@@ -426,7 +417,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
 .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
 .intro-visual{
   height:560px;border-radius:var(--radius);overflow:hidden;position:relative;
-  background:#162c26
+  background:#0d2a49
 }
 .intro-visual img{opacity:.86;transition:transform 1s var(--ease)}
 .intro-visual:hover img{transform:scale(1.04)}
@@ -443,6 +434,250 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
 .point b{font-size:10px;color:var(--gold);font-weight:500}
 .point strong{font-size:13px;font-weight:600}.point span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
 
+
+/* ATTRACTIONS */
+.attractions-section{
+  background:
+    radial-gradient(circle at 12% 18%,rgba(201,164,94,.08),transparent 30%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+}
+.attraction-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:40px;
+  margin-bottom:34px;
+}
+.attraction-head h2{
+  font-size:clamp(42px,5vw,66px);
+  line-height:.97;
+  letter-spacing:-.055em;
+}
+.attraction-head h2 em{
+  color:var(--gold);
+  font-family:"Playfair Display";
+}
+.attraction-copy{
+  max-width:410px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* Parmar-inspired search bar: search + category discovery */
+.attraction-search-wrap{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:rgba(12,39,69,.72);
+  box-shadow:0 18px 55px rgba(0,0,0,.16);
+  margin-bottom:25px;
+}
+.attraction-search{
+  display:flex;
+  gap:10px;
+}
+.attraction-search input{
+  flex:1;
+  min-width:0;
+  height:54px;
+  border:1px solid rgba(225,196,126,.16);
+  border-radius:14px;
+  outline:none;
+  background:rgba(7,27,52,.72);
+  color:var(--text);
+  padding:0 18px;
+  font-size:13px;
+  transition:.2s;
+}
+.attraction-search input::placeholder{color:rgba(174,185,197,.72)}
+.attraction-search input:focus{
+  border-color:rgba(201,164,94,.65);
+  box-shadow:0 0 0 4px rgba(201,164,94,.07);
+}
+.attraction-search button{
+  height:54px;
+  padding:0 22px;
+  border:1px solid var(--gold);
+  border-radius:14px;
+  background:var(--gold);
+  color:var(--navy);
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+  transition:.22s;
+}
+.attraction-search button:hover{
+  background:var(--gold-light);
+  transform:translateY(-1px);
+}
+.attraction-categories{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:13px;
+}
+.attraction-category{
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--muted);
+  border-radius:999px;
+  padding:9px 13px;
+  font-size:10px;
+  cursor:pointer;
+  transition:.22s;
+}
+.attraction-category:hover,
+.attraction-category.active{
+  color:var(--navy);
+  background:var(--gold);
+  border-color:var(--gold);
+}
+
+.attraction-toolbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin:25px 0 15px;
+}
+.attraction-toolbar h3{
+  font-size:19px;
+  letter-spacing:-.02em;
+}
+.attraction-count{
+  color:var(--muted);
+  font-size:10px;
+}
+.attraction-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px;
+}
+.attraction-card{
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:18px;
+  overflow:hidden;
+  min-width:0;
+  transition:transform .3s var(--ease),border-color .3s,box-shadow .3s;
+}
+.attraction-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(201,164,94,.42);
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+.attraction-card.is-hidden{display:none}
+.attraction-img{
+  height:185px;
+  position:relative;
+  overflow:hidden;
+}
+.attraction-img img{
+  transition:transform .7s var(--ease);
+  filter:saturate(.82);
+}
+.attraction-card:hover .attraction-img img{
+  transform:scale(1.06);
+  filter:saturate(1);
+}
+.attraction-badge{
+  position:absolute;
+  left:12px;
+  top:12px;
+  padding:6px 8px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(4,14,28,.62);
+  backdrop-filter:blur(8px);
+  border-radius:999px;
+  color:var(--gold-light);
+  font-size:7px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.attraction-body{padding:17px}
+.attraction-location{
+  color:var(--gold);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.attraction-card h4{
+  font-size:16px;
+  line-height:1.2;
+  margin:7px 0 6px;
+  letter-spacing:-.025em;
+}
+.attraction-card p{
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.6;
+  min-height:32px;
+}
+.attraction-foot{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  border-top:1px solid var(--line);
+  margin-top:14px;
+  padding-top:13px;
+}
+.attraction-price{
+  color:var(--cream);
+  font-size:10px;
+}
+.attraction-price strong{
+  color:var(--gold-light);
+  font-size:12px;
+}
+.attraction-link{
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:50%;
+  color:var(--gold);
+  font-size:9px;
+  transition:.2s;
+}
+.attraction-link:hover{
+  background:var(--gold);
+  color:var(--navy);
+}
+.attraction-empty{
+  display:none;
+  text-align:center;
+  padding:38px 20px;
+  border:1px dashed var(--line);
+  border-radius:18px;
+  color:var(--muted);
+  font-size:12px;
+  grid-column:1/-1;
+}
+.attraction-empty.visible{display:block}
+.attraction-reset{
+  border:0;
+  background:none;
+  color:var(--gold);
+  cursor:pointer;
+  font-size:11px;
+  margin-left:6px;
+}
+@media(max-width:1000px){
+  .attraction-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .attraction-head{display:block}
+  .attraction-copy{margin-top:18px}
+  .attraction-search{display:grid;grid-template-columns:1fr}
+  .attraction-search button{width:100%}
+  .attraction-grid{grid-template-columns:1fr}
+  .attraction-toolbar{align-items:start}
+}
+
 /* DESTINATIONS */
 .dest-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:42px}
 .dest-head h2{font-size:clamp(42px,5vw,66px);line-height:.98;letter-spacing:-.055em}
@@ -454,7 +689,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
 .destination:hover img{transform:scale(1.055);filter:saturate(1)}
 .destination:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,8,7,.85),transparent 55%)}
 .destination-content{position:absolute;z-index:2;left:22px;right:22px;bottom:20px}
-.destination-content small{font-size:9px;letter-spacing:.19em;color:var(--gold2);text-transform:uppercase}
+.destination-content small{font-size:9px;letter-spacing:.19em;color:var(--gold-light);text-transform:uppercase}
 .destination-content h3{font-size:25px;letter-spacing:-.035em;margin:6px 0}
 .destination-content p{font-size:11px;color:rgba(255,255,255,.65);line-height:1.55}
 .destination-arrow{position:absolute;right:20px;bottom:20px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;z-index:3;transition:.25s}
@@ -500,7 +735,7 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
 .package-head h2 em{color:var(--gold);font-family:"Playfair Display"}
 .package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .package{border:1px solid var(--line);background:var(--card);border-radius:20px;overflow:hidden;transition:.3s}
-.package:hover{transform:translateY(-5px);border-color:rgba(217,180,122,.35)}
+.package:hover{transform:translateY(-5px);border-color:rgba(201,164,94,.35)}
 .package-img{height:270px;position:relative}
 .package-img img{filter:saturate(.8)}
 .package-label{position:absolute;top:15px;left:15px;padding:7px 10px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border-radius:999px;color:white;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
@@ -512,6 +747,28 @@ h1,h2,h3{font-family:"Manrope",sans-serif;font-weight:500}
 .package-foot span{font-size:10px;color:var(--muted)}
 .circle-link{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:10px;transition:.2s}
 .package:hover .circle-link{background:var(--text);color:var(--bg)}
+
+
+/* PARTNERS */
+.partners-section{background:var(--bg2);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);overflow:hidden}
+.partners-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:38px}
+.partners-head h2{font-size:clamp(40px,5vw,62px);line-height:.98;letter-spacing:-.055em}
+.partners-head h2 em{color:var(--gold-light);font-family:"Playfair Display"}
+.partners-copy{max-width:430px;color:var(--muted);font-size:13px;line-height:1.8}
+.partner-marquee{position:relative;overflow:hidden;padding:8px 0 16px}
+.partner-track{display:flex;width:max-content;gap:14px;animation:partnerScroll 34s linear infinite}
+.partner-track:hover{animation-play-state:paused}
+.partner-logo-card{width:218px;height:126px;flex:none;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;padding:20px;transition:.28s;box-shadow:0 14px 35px rgba(0,0,0,.10)}
+.partner-logo-card:hover{transform:translateY(-4px);border-color:rgba(201,164,94,.55);box-shadow:0 18px 42px rgba(0,0,0,.18)}
+.partner-logo-card img{width:100%;height:100%;object-fit:contain;display:block}
+.partner-note{margin-top:22px;text-align:center;color:rgba(174,185,197,.68);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+@keyframes partnerScroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 7px))}}
+@media(max-width:640px){
+  .partners-head{display:block}
+  .partners-copy{margin-top:18px}
+  .partner-logo-card{width:180px;height:108px;padding:16px}
+  .partner-track{gap:10px;animation-duration:28s}
+}
 
 /* CTA */
 .cta{
@@ -541,7 +798,7 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 /* WHATSAPP */
 .whatsapp{
   position:fixed;right:20px;bottom:20px;width:51px;height:51px;border-radius:50%;
-  display:grid;place-items:center;background:#f5f1e8;color:#102a25;z-index:80;
+  display:grid;place-items:center;background:#f5f1e8;color:#071b34;z-index:80;
   box-shadow:0 15px 40px rgba(0,0,0,.28);font-size:20px;transition:.25s
 }
 .whatsapp:hover{transform:translateY(-4px)}
@@ -550,10 +807,183 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.visible{opacity:1;transform:none}
 
-/* LIGHT THEME image overlays */
-[data-theme="light"] .experience,
-[data-theme="light"] .cta{background-blend-mode:multiply}
-[data-theme="light"] .destination:after{background:linear-gradient(0deg,rgba(4,8,7,.72),transparent 58%)}
+
+/* BRAND INTRO — airplane-arc launch */
+.brand-transition{
+  position:fixed;
+  inset:0;
+  z-index:120;
+  overflow:hidden;
+  pointer-events:auto;
+  cursor:pointer;
+  background:
+    radial-gradient(circle at 50% 43%,rgba(201,164,94,.11),transparent 34%),
+    linear-gradient(180deg,rgba(7,27,52,.985),rgba(5,20,38,.98));
+  opacity:1;
+  visibility:visible;
+  transition:opacity .22s ease,visibility .22s ease;
+}
+.brand-transition::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at 50% 50%,transparent 0 28%,rgba(0,0,0,.16) 75%,rgba(0,0,0,.28));
+}
+.brand-orbit{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:min(58vw,620px);
+  height:min(58vw,620px);
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(201,164,94,.13);
+  border-radius:50%;
+  box-shadow:0 0 100px rgba(201,164,94,.055);
+}
+.brand-orbit::before,.brand-orbit::after{
+  content:"";
+  position:absolute;
+  inset:11%;
+  border:1px solid rgba(201,164,94,.065);
+  border-radius:50%;
+}
+.brand-orbit::after{inset:24%;border-color:rgba(201,164,94,.045)}
+
+.brand-arc{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:min(92vw,980px);
+  height:min(72vh,720px);
+  transform:translate(-50%,-50%);
+  overflow:visible;
+  pointer-events:none;
+}
+.brand-arc path{
+  fill:none;
+  stroke:var(--gold);
+  stroke-width:2.2;
+  stroke-linecap:round;
+  stroke-dasharray:1100;
+  stroke-dashoffset:1100;
+  opacity:.78;
+  filter:drop-shadow(0 0 7px rgba(201,164,94,.28));
+}
+.svg-plane{
+  fill:var(--gold-light);
+  font-size:27px;
+  opacity:0;
+  filter:drop-shadow(0 0 9px rgba(201,164,94,.3));
+}
+.brand-transition.launching .svg-plane{
+  opacity:.95;
+}
+.brand-mark{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:min(43vw,430px);
+  transform:translate(-50%,-50%);
+  will-change:transform,opacity;
+  z-index:3;
+}
+.brand-mark img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 18px 45px rgba(0,0,0,.34));
+}
+.brand-caption{
+  position:absolute;
+  left:50%;
+  bottom:7%;
+  transform:translateX(-50%);
+  font-size:8px;
+  letter-spacing:.32em;
+  color:rgba(225,196,126,.62);
+  white-space:nowrap;
+  z-index:4;
+}
+.brand-hint{
+  position:absolute;
+  left:50%;
+  bottom:3.5%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:rgba(247,242,231,.45);
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  z-index:4;
+}
+.brand-hint i{color:var(--gold);font-size:9px}
+
+/* One-second airplane launch */
+.brand-transition.launching .brand-arc path{
+  animation:drawArc 1s cubic-bezier(.55,.05,.2,1) forwards;
+}
+.brand-transition.launching .brand-orbit{
+  animation:orbitFade .7s ease forwards;
+}
+.brand-transition.launching .brand-caption,
+.brand-transition.launching .brand-hint{
+  animation:hintFade .28s ease forwards;
+}
+.brand-transition.hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+@keyframes drawArc{
+  0%{stroke-dashoffset:1100;opacity:.15}
+  12%{opacity:.85}
+  100%{stroke-dashoffset:0;opacity:.9}
+}
+@keyframes orbitFade{
+  to{opacity:0;transform:translate(-50%,-50%) scale(1.18)}
+}
+@keyframes hintFade{
+  to{opacity:0;transform:translate(-50%,8px)}
+}
+
+
+.nav-logo-ticket{width:45px;flex:none}
+.nav-logo-ticket img{width:100%;height:auto;display:block;object-fit:contain}
+.nav-logo-wordmark{width:154px;flex:none}
+.nav-logo-wordmark img{width:100%;height:auto;display:block;object-fit:contain}
+.logo{gap:5px;align-items:center}
+.logo:hover .nav-logo-ticket,.logo:hover .nav-logo-wordmark{
+  filter:drop-shadow(0 4px 12px rgba(201,164,94,.16))
+}
+@media(max-width:640px){
+  .nav-logo-ticket{width:36px}
+  .nav-logo-wordmark{width:122px}
+}
+
+/* Brand palette refinements */
+.nav.scrolled{background:color-mix(in srgb,var(--navy) 88%,transparent)}
+.btn-primary{background:var(--gold);color:var(--navy);border:1px solid var(--gold)}
+.btn-primary:hover{background:var(--gold-light);color:var(--navy)}
+.btn-outline{border-color:rgba(201,164,94,.35)}
+.btn-outline:hover{background:rgba(201,164,94,.08);border-color:var(--gold);color:var(--gold-light)}
+.hero{background:
+  radial-gradient(ellipse at 73% 62%,rgba(201,164,94,.20) 0%,rgba(201,164,94,.07) 20%,transparent 43%),
+  radial-gradient(ellipse at 75% 72%,rgba(14,57,93,.48),transparent 42%),
+  linear-gradient(180deg,#040e1c 0%,#071b34 48%,#0a2744 100%)}
+.hero h1 .gold-line,.intro h2 em,.dest-head h2 em,.service-head h2 em,.experience h2 em,.package-head h2 em,.cta h2 em{color:var(--gold-light)}
+.services{background:var(--bg2)}
+.experience{background:
+  linear-gradient(0deg,rgba(4,14,28,.92),rgba(4,14,28,.08) 75%),
+  url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=2200&q=90") center/cover}
+.cta{background:
+  linear-gradient(90deg,rgba(4,14,28,.94),rgba(4,14,28,.40)),
+  url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=2200&q=90") center/cover}
 
 /* RESPONSIVE */
 @media(max-width:1000px){
@@ -562,7 +992,6 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
   .hero-grid{grid-template-columns:1fr;padding-top:110px}
   .hero-copy{padding-top:50px}
   .hero-visual{height:560px}
-  .scene{transform:scale(.82)}
   .intro-grid{grid-template-columns:1fr;gap:50px}
   .intro-visual{height:500px}
   .destinations-grid{grid-template-columns:1fr 1fr;height:auto}
@@ -618,34 +1047,54 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 .mobile-menu a{display:block;padding:14px;border-bottom:1px solid var(--line2);font-size:13px}
 .mobile-menu a:last-child{border:0}
 @keyframes float{0%,100%{transform:translateY(0) rotateY(-6deg)}50%{transform:translateY(-15px) rotateY(8deg)}}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,180,122,.0)}50%{box-shadow:0 0 0 15px rgba(217,180,122,.03)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,164,94,.0)}50%{box-shadow:0 0 0 15px rgba(201,164,94,.03)}}
 @keyframes spin{to{transform:rotate(343deg) rotateX(62deg)}}
 @keyframes spin2{to{transform:rotate(415deg) rotateX(68deg)}}
 @keyframes spin3{to{transform:rotateY(427deg) rotateX(9deg)}}
+
+.mainLogo{border-radius:50%}
 </style>
 </head>
 
-<body data-theme="dark">
+<body>
+<!-- BRAND INTRO / SCROLL TRANSITION -->
+<div class="brand-transition" id="brandTransition" role="button" tabindex="0"
+     aria-label="Enter Beyond Paradise Tourism website">
+  <div class="brand-orbit"></div>
+
+  <svg class="brand-arc" viewBox="0 0 980 720" preserveAspectRatio="none" aria-hidden="true">
+    <path id="flightPath" d="M 490 360 C 600 70 820 55 930 230"></path>
+    <animateMotion class="svg-plane-motion" href="#flightPath" xlink:href="#flightPath"
+      dur="1s" begin="indefinite" rotate="auto" fill="freeze">
+    </animateMotion>
+  </svg>
+
+  <div class="brand-mark">
+    <img class="mainLogo" src="assets/logo1.jpg" alt="Beyond Paradise Tourism">
+  </div>
+
+  <div class="brand-caption">UNITED ARAB EMIRATES · TOURISM LLC</div>
+  <div class="brand-hint"><i class="fa-solid fa-arrow-pointer"></i> Click to begin</div>
+</div>
+
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#home" class="logo">
-      <span class="logo-symbol"><i class="fa-solid fa-compass"></i></span>
-      <span class="logo-text"><strong>BEYOND PARADISE</strong><small>TOURISM · UAE</small></span>
+    <a href="#home" class="logo" aria-label="Beyond Paradise Tourism home">
+      <span class="nav-logo-wordmark"><img src="assets/NavLogo.png" alt="Beyond Paradise Tourism"></span>
     </a>
 
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#destinations">Destinations</a>
+      <a href="#attractions">Attractions</a>
+      <a href="#partners">Partners</a>
       <a href="#services">Services</a>
       <a href="#packages">Packages</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="nav-actions">
-      <button class="icon-btn" id="themeBtn" aria-label="Change theme" title="Change theme">
-        <i class="fa-solid fa-sun"></i>
-      </button>
       <a class="nav-cta" href="#contact">Plan a UAE trip <i class="fa-solid fa-arrow-right"></i></a>
       <button class="icon-btn menu" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -655,6 +1104,8 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about">About</a>
   <a href="#destinations">Destinations</a>
+  <a href="#attractions">Attractions</a>
+  <a href="#partners">Partners</a>
   <a href="#services">Services</a>
   <a href="#packages">Packages</a>
   <a href="#contact">Contact</a>
@@ -765,6 +1216,208 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
   </div>
 </section>
 
+
+<!-- ATTRACTIONS -->
+<section class="section attractions-section" id="attractions">
+  <div class="container">
+    <div class="attraction-head reveal">
+      <div>
+        <div class="eyebrow">Tickets · Experiences · Things to do</div>
+        <h2>Find your next<br><em>UAE experience.</em></h2>
+      </div>
+      <p class="attraction-copy">
+        Search attractions, activities and experiences by name, emirate or category.
+        Start with a search or explore the most popular things to do across the UAE.
+      </p>
+    </div>
+
+    <div class="attraction-search-wrap reveal">
+      <form class="attraction-search" id="attractionSearch">
+        <input
+          id="attractionQuery"
+          type="search"
+          autocomplete="off"
+          placeholder="Search attractions or activities"
+          aria-label="Search attractions or activities"
+        >
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+      </form>
+
+      <div class="attraction-categories" aria-label="Attraction categories">
+        <button class="attraction-category active" type="button" data-category="all">All</button>
+        <button class="attraction-category" type="button" data-category="water">Water Activities</button>
+        <button class="attraction-category" type="button" data-category="theme">Theme Parks</button>
+        <button class="attraction-category" type="button" data-category="zoo">Zoo & Aquarium</button>
+        <button class="attraction-category" type="button" data-category="cruise">Cruises & Dinner</button>
+        <button class="attraction-category" type="button" data-category="city">City Tours</button>
+        <button class="attraction-category" type="button" data-category="snow">Snow Activities</button>
+        <button class="attraction-category" type="button" data-category="indoor">Indoor Activities</button>
+        <button class="attraction-category" type="button" data-category="culture">Museums & Culture</button>
+        <button class="attraction-category" type="button" data-category="nature">Gardens & Parks</button>
+      </div>
+    </div>
+
+    <div class="attraction-toolbar reveal">
+      <div>
+        <div class="eyebrow" style="margin-bottom:7px">Popular now</div>
+        <h3>Top Things To Do</h3>
+      </div>
+      <span class="attraction-count" id="attractionCount">8 experiences</span>
+    </div>
+
+    <div class="attraction-grid" id="attractionGrid">
+      <article class="attraction-card reveal"
+               data-category="theme"
+               data-search="img worlds of adventure dubai theme park indoor family rides">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=900&q=85" alt="Theme park experience">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · Theme Park</span>
+          <h4>IMG Worlds of Adventure</h4>
+          <p>Indoor thrills, rides and entertainment for the whole family.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Enquire<strong> Now</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about IMG Worlds of Adventure"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="attraction-card reveal"
+               data-category="indoor"
+               data-search="aya universe dubai indoor immersive digital art family">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85" alt="Immersive indoor experience">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · Indoor</span>
+          <h4>AYA Universe</h4>
+          <p>Immersive digital worlds filled with light, sound and movement.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Enquire<strong> Now</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about AYA Universe"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="attraction-card reveal"
+               data-category="culture"
+               data-search="museum of future dubai museum culture landmark">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85" alt="Dubai landmark">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · Museum</span>
+          <h4>Museum of the Future</h4>
+          <p>A landmark journey into future technology, design and ideas.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Enquire<strong> Now</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about Museum of the Future"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="attraction-card reveal"
+               data-category="water"
+               data-search="atlantis aquaventure dubai water activities waterpark family">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=85" alt="Water activity">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · Water</span>
+          <h4>Aquaventure Waterpark</h4>
+          <p>Slides, pools, beaches and full-day aquatic adventure.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about Aquaventure Waterpark"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="attraction-card reveal"
+               data-category="cruise"
+               data-search="dubai marina dinner cruise dhow cruise dinner">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=85" alt="Dubai evening cruise">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · Cruise</span>
+          <h4>Marina Dinner Cruise</h4>
+          <p>See Dubai's illuminated skyline from the water with dinner.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about Marina Dinner Cruise"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="attraction-card reveal"
+               data-category="city"
+               data-search="dubai city tour burj khalifa palm jumeirah landmarks">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai city tour">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · City Tour</span>
+          <h4>Dubai City Tour</h4>
+          <p>Discover iconic landmarks, old Dubai and the city's modern side.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Private <strong>Tour</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about Dubai City Tour"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="attraction-card reveal"
+               data-category="snow"
+               data-search="ski dubai snow activities mall of emirates indoor skiing">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=85" alt="Snow activity">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · Snow</span>
+          <h4>Ski Dubai</h4>
+          <p>Indoor snow, slopes and winter activities in the heart of Dubai.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about Ski Dubai"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="attraction-card reveal"
+               data-category="nature"
+               data-search="green planet dubai garden nature rainforest animals">
+        <div class="attraction-img">
+          <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=900&q=85" alt="Indoor rainforest experience">
+          <span class="attraction-badge">Dubai</span>
+        </div>
+        <div class="attraction-body">
+          <span class="attraction-location">Dubai · Nature</span>
+          <h4>The Green Planet</h4>
+          <p>Explore an indoor tropical rainforest and discover exotic wildlife.</p>
+          <div class="attraction-foot">
+            <span class="attraction-price">Enquire <strong>Now</strong></span>
+            <a class="attraction-link" href="#contact" aria-label="Enquire about The Green Planet"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="attraction-empty" id="attractionEmpty">
+        No attractions matched your search.
+        <button class="attraction-reset" type="button" id="attractionReset">Clear search</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DESTINATIONS -->
 <section class="section" id="destinations">
   <div class="container">
@@ -784,7 +1437,7 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
       </article>
 
       <article class="destination reveal">
-        <img src="https://images.unsplash.com/photo-1536501050161-9a4b4a2fce42?auto=format&fit=crop&w=1100&q=90" alt="Abu Dhabi Grand Mosque">
+        <img src="assets/abudhabi.jpg" alt="Abu Dhabi Grand Mosque">
         <div class="destination-content"><small>Emirate 02</small><h3>Abu Dhabi</h3><p>Culture, grand architecture, islands and refined experiences.</p></div>
         <span class="destination-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
       </article>
@@ -862,7 +1515,7 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
       </article>
 
       <article class="package reveal">
-        <div class="package-img"><img src="https://images.unsplash.com/photo-1591218009875-aaebc6f4f3bb?auto=format&fit=crop&w=1200&q=90" alt="Abu Dhabi mosque"></div>
+        <div class="package-img"><img src="assets/abudhabi.jpg" alt="Abu Dhabi mosque"></div>
         <div class="package-body"><div class="package-meta"><span>Abu Dhabi</span><span>3–4 nights</span></div><h3>Abu Dhabi, Refined</h3><p>Grand architecture, island escapes, cultural landmarks and a slower city rhythm.</p><div class="package-foot"><span>Culture · Luxury</span><a href="#contact" class="circle-link"><i class="fa-solid fa-arrow-right"></i></a></div></div>
       </article>
 
@@ -874,6 +1527,58 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
   </div>
 </section>
 
+
+<!-- PARTNERS -->
+<section class="section partners-section" id="partners">
+  <div class="container">
+    <div class="partners-head reveal">
+      <div>
+        <div class="eyebrow">Trusted attraction partners</div>
+        <h2>Our <em>partners.</em></h2>
+      </div>
+      <p class="partners-copy">
+        We work with some of the UAE's best-known attractions and experiences to help make every Beyond Paradise journey seamless.
+      </p>
+    </div>
+
+    <div class="partner-marquee reveal" aria-label="Our attraction partners">
+      <div class="partner-track">
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/1-DhQNQJKn.webp" alt="Warner Bros. World Abu Dhabi"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/2-ByWnCrNI.png" alt="Dubai Dolphinarium"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/3-DkzTFIj9.png" alt="Dubai Miracle Garden"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/4-C8hfUpxq.png" alt="The Palm Monorail"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/2-DLQ8-14y.webp" alt="Global Village"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/3-tfrkky_b.webp" alt="Ain Dubai"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/4-CnPHroWk.webp" alt="At the Top Burj Khalifa"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/5-CMPMW5RF.webp" alt="Big Bus Dubai"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/6-DuXXHNBF.webp" alt="PVRK Dubai"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/7-L8-TupW1.webp" alt="Dubai Frame"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/11-DYg0rb5U.webp" alt="Dubai Garden Glow"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/8-DJ5ZvDw2.webp" alt="Dubai Aquarium & Underwater Zoo"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/9-DxnKxSKr.webp" alt="Ferrari World Abu Dhabi"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/10-B5GwX6LU.webp" alt="Dubai Future Foundation"></div>
+
+        <!-- Duplicate set for seamless marquee looping -->
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/1-DhQNQJKn.webp" alt="Warner Bros. World Abu Dhabi"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/2-ByWnCrNI.png" alt="Dubai Dolphinarium"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/3-DkzTFIj9.png" alt="Dubai Miracle Garden"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/4-C8hfUpxq.png" alt="The Palm Monorail"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/2-DLQ8-14y.webp" alt="Global Village"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/3-tfrkky_b.webp" alt="Ain Dubai"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/4-CnPHroWk.webp" alt="At the Top Burj Khalifa"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/5-CMPMW5RF.webp" alt="Big Bus Dubai"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/6-DuXXHNBF.webp" alt="PVRK Dubai"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/7-L8-TupW1.webp" alt="Dubai Frame"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/11-DYg0rb5U.webp" alt="Dubai Garden Glow"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/8-DJ5ZvDw2.webp" alt="Dubai Aquarium & Underwater Zoo"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/9-DxnKxSKr.webp" alt="Ferrari World Abu Dhabi"></div>
+        <div class="partner-logo-card"><img src="https://parmartours.com/public/build/assets/10-B5GwX6LU.webp" alt="Dubai Future Foundation"></div>
+      </div>
+    </div>
+    <div class="partner-note">14 partner logos · sourced from the Parmar Tourism partner carousel</div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta reveal" id="contact">
   <div class="cta-content">
@@ -881,7 +1586,7 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
     <h2>Tell us what<br>you want to <em>feel.</em></h2>
     <p>Tell us your dates, who you are travelling with and what kind of UAE experience you have in mind. We'll take it from there.</p>
     <!-- Replace the number below with the real business WhatsApp number -->
-    <a class="btn btn-primary" href="https://wa.me/971500000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Plan my UAE trip</a>
+    <a class="btn btn-primary" href="https://wa.me/971505357834" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Plan my UAE trip</a>
   </div>
 </section>
 </main>
@@ -900,13 +1605,13 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
       </div>
       <div class="footer-col"><h4>Explore</h4><a href="#about">About</a><a href="#destinations">Destinations</a><a href="#services">Services</a><a href="#packages">Packages</a></div>
       <div class="footer-col"><h4>Services</h4><a href="#services">Visa Assistance</a><a href="#services">Hotels</a><a href="#services">Transfers</a><a href="#services">Tours</a></div>
-      <div class="footer-col"><h4>Contact</h4><p>Dubai, United Arab Emirates</p><a href="tel:+971500000000">+971 50 000 0000</a><a href="mailto:hello@beyondparadisetourism.com">hello@beyondparadisetourism.com</a></div>
+      <div class="footer-col"><h4>Contact</h4><p>Dubai, United Arab Emirates</p><a href="tel:+971505357834">+971 50 535 7834</a><a href="mailto:ops.paradisetourism@gmail.com">ops.paradisetourism@gmail.com</a></div>
     </div>
     <div class="footer-bottom"><span>© <span id="year"></span> Beyond Paradise Tourism. All rights reserved.</span><span>Dubai · United Arab Emirates</span></div>
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/971500000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a class="whatsapp" href="https://wa.me/971505357834" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 
 
@@ -914,22 +1619,6 @@ footer{border-top:1px solid var(--line2);padding:70px 0 25px}
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>35),{passive:true});
-
-const themeBtn=document.getElementById('themeBtn');
-const savedTheme=localStorage.getItem('bp-theme');
-if(savedTheme) document.body.dataset.theme=savedTheme;
-function updateThemeIcon(){
-  themeBtn.innerHTML=document.body.dataset.theme==='dark'
-    ? '<i class="fa-solid fa-sun"></i>'
-    : '<i class="fa-solid fa-moon"></i>';
-}
-updateThemeIcon();
-themeBtn.addEventListener('click',()=>{
-  const next=document.body.dataset.theme==='dark'?'light':'dark';
-  document.body.dataset.theme=next;
-  localStorage.setItem('bp-theme',next);
-  updateThemeIcon();
-});
 
 const menuBtn=document.getElementById('menuBtn');
 const mobileMenu=document.getElementById('mobileMenu');
@@ -953,6 +1642,126 @@ const observer=new IntersectionObserver(entries=>{
   });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+
+const brandTransition=document.getElementById('brandTransition');
+const brandMark=document.querySelector('.brand-mark');
+const flightPath=document.getElementById('flightPath');
+const svgPlane=document.querySelector('.svg-plane');
+const arcSvg=document.querySelector('.brand-arc');
+
+function launchBrand(){
+  if(brandTransition.classList.contains('launching')) return;
+  brandTransition.classList.add('launching');
+
+  const start=performance.now();
+  const duration=1000;
+  const total=flightPath.getTotalLength();
+
+  // The logo follows the exact SVG flight path, so it truly traces the arc.
+  function animateLogo(now){
+    const progress=Math.min((now-start)/duration,1);
+    const eased=progress < .5
+      ? 2*progress*progress
+      : 1-Math.pow(-2*progress+2,2)/2;
+
+    const distance=total*eased;
+    const point=flightPath.getPointAtLength(distance);
+    const next=flightPath.getPointAtLength(Math.min(distance+2,total));
+    const angle=Math.atan2(next.y-point.y,next.x-point.x)*180/Math.PI;
+
+    const rect=arcSvg.getBoundingClientRect();
+    const x=rect.left + (point.x/980)*rect.width;
+    const y=rect.top + (point.y/720)*rect.height;
+
+    const scale=1-eased*.82;
+    brandMark.style.left=x+'px';
+    brandMark.style.top=y+'px';
+    brandMark.style.transform=`translate(-50%,-50%) rotate(${angle}deg) scale(${scale})`;
+    brandMark.style.opacity=String(1-eased*.12);
+
+    if(progress<1){
+      requestAnimationFrame(animateLogo);
+    }else{
+      brandMark.style.opacity='0';
+    }
+  }
+
+  requestAnimationFrame(animateLogo);
+
+  // Start the SVG airplane travelling over the same path.
+  const motion=arcSvg.querySelector('.svg-plane-motion');
+  if(motion){
+    motion.setAttribute('dur','1s');
+    motion.beginElement();
+  }
+
+  window.setTimeout(()=>{
+    brandTransition.classList.add('hidden');
+  },1000);
+}
+
+brandTransition.addEventListener('click',launchBrand);
+brandTransition.addEventListener('keydown',(e)=>{
+  if(e.key==='Enter' || e.key===' '){
+    e.preventDefault();
+    launchBrand();
+  }
+});
+
+
+// ATTRACTIONS: client-side search + category filters
+const attractionSearch = document.getElementById('attractionSearch');
+const attractionQuery = document.getElementById('attractionQuery');
+const attractionCards = [...document.querySelectorAll('.attraction-card')];
+const attractionCategories = [...document.querySelectorAll('.attraction-category')];
+const attractionCount = document.getElementById('attractionCount');
+const attractionEmpty = document.getElementById('attractionEmpty');
+const attractionReset = document.getElementById('attractionReset');
+
+let activeAttractionCategory = 'all';
+
+function filterAttractions(){
+  const query = attractionQuery.value.trim().toLowerCase();
+  let visible = 0;
+
+  attractionCards.forEach(card=>{
+    const haystack = (card.dataset.search || '').toLowerCase();
+    const category = card.dataset.category || '';
+    const matchesQuery = !query || haystack.includes(query);
+    const matchesCategory = activeAttractionCategory === 'all' || category === activeAttractionCategory;
+    const show = matchesQuery && matchesCategory;
+
+    card.classList.toggle('is-hidden', !show);
+    if(show) visible++;
+  });
+
+  attractionCount.textContent = `${visible} experience${visible === 1 ? '' : 's'}`;
+  attractionEmpty.classList.toggle('visible', visible === 0);
+}
+
+attractionSearch.addEventListener('submit', e=>{
+  e.preventDefault();
+  filterAttractions();
+  document.getElementById('attractions').scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+attractionQuery.addEventListener('input', filterAttractions);
+
+attractionCategories.forEach(button=>{
+  button.addEventListener('click', ()=>{
+    activeAttractionCategory = button.dataset.category;
+    attractionCategories.forEach(btn=>btn.classList.toggle('active', btn === button));
+    filterAttractions();
+  });
+});
+
+attractionReset.addEventListener('click', ()=>{
+  attractionQuery.value = '';
+  activeAttractionCategory = 'all';
+  attractionCategories.forEach(btn=>btn.classList.toggle('active', btn.dataset.category === 'all'));
+  filterAttractions();
+});
 
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
